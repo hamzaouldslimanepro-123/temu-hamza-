@@ -1,0 +1,4 @@
+scraped_products/
+*.html
+__pycache__/
+*.pyc

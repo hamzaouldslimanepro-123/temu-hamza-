@@ -50,6 +50,8 @@ supprimer l'ancienne, au cas où l'import d'images échoue.
 | Marques | Jamais traduites ni déformées, reproduites à l'identique |
 | Orthographe | Chaque caractère vérifié. « kg » et « cm » exactement |
 | Rien à corriger | Si ni texte anglais, ni unité impériale, ni mannequin à changer → **on ne touche pas à l'image**, on garde l'originale (0 crédit) |
+| **Coloris** | On prend **uniquement les images principales du lien donné** (`highResolutionImages`). Les autres variantes de couleur (`variantDetails`) sont ignorées et **ne sont pas proposées** — le lien définit le produit |
+| **Avis clients** | **Jamais.** `reviews` et `testimonials` restent vides. Ne pas les scraper, ne pas les importer, ne pas en parler dans le compte rendu |
 | Le reste | Cadrage, composition, fond, forme et couleurs du produit, lumière : strictement identiques |
 
 ## Arrondi des poids convertis — OBLIGATOIRE

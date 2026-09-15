@@ -2,7 +2,7 @@
 
 Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **DZD**.
 
-## Les 6 règles dures
+## Les 8 règles dures
 
 1. **Ne lancer AUCUNE action sans l'annoncer et obtenir la validation d'Hamza.**
    Vaut pour tout ce qui **dépense** (Magnific, Apify), **écrit** (GitHub,
@@ -32,6 +32,15 @@ Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **D
    proche**, sans décimale. 199 kg → **200 kg**. 111,8 kg → **110 kg**.
    S'applique aux images, au titre, à la description, aux features et à la FAQ.
    Les dimensions en cm gardent leur valeur exacte.
+
+7. **Toujours les images principales du lien donné** (`highResolutionImages`),
+   et elles seules. Même si le produit existe en plusieurs coloris, on ne
+   récupère pas les autres variantes et **on ne les propose pas**. Le lien
+   fourni définit le produit.
+
+8. **Jamais d'avis client, de témoignage ou de note.** Hamza n'en demande pas.
+   Les champs `reviews` et `testimonials` restent vides, et on n'en parle pas
+   dans le compte rendu.
 
 ## Avant d'agir, lire
 

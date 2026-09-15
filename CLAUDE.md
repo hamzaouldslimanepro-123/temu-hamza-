@@ -2,7 +2,7 @@
 
 Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **DZD**.
 
-## Les 8 règles dures
+## Les 9 règles dures
 
 1. **Ne lancer AUCUNE action sans l'annoncer et obtenir la validation d'Hamza.**
    Vaut pour tout ce qui **dépense** (Magnific, Apify), **écrit** (GitHub,
@@ -41,6 +41,17 @@ Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **D
 8. **Jamais d'avis client, de témoignage ou de note.** Hamza n'en demande pas.
    Les champs `reviews` et `testimonials` restent vides, et on n'en parle pas
    dans le compte rendu.
+
+9. **Nettoyage de la description — à retirer systématiquement :**
+   - toute mention de **garantie** (garantie X ans, satisfait ou remboursé,
+     remboursement, retour gratuit)
+   - toute mention de **SAV** / service client / assistance après-vente
+   - le mot **Noël** et toute référence saisonnière (Noël, fêtes, cadeau de
+     Noël, Black Friday…)
+
+   Vaut pour la description, le titre, les features et la FAQ. Ces éléments
+   viennent du vendeur d'origine et n'engagent pas Hamza — on ne les reprend
+   jamais.
 
 ## Avant d'agir, lire
 

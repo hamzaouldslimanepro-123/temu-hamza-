@@ -52,6 +52,8 @@ supprimer l'ancienne, au cas où l'import d'images échoue.
 | Rien à corriger | Si ni texte anglais, ni unité impériale, ni mannequin à changer → **on ne touche pas à l'image**, on garde l'originale (0 crédit) |
 | **Coloris** | On prend **uniquement les images principales du lien donné** (`highResolutionImages`). Les autres variantes de couleur (`variantDetails`) sont ignorées et **ne sont pas proposées** — le lien définit le produit |
 | **Avis clients** | **Jamais.** `reviews` et `testimonials` restent vides. Ne pas les scraper, ne pas les importer, ne pas en parler dans le compte rendu |
+| **Garantie / SAV** | **Retirés systématiquement** de la description, du titre, des features et de la FAQ : garantie X ans, satisfait ou remboursé, retour gratuit, SAV, service client, assistance après-vente. Ce sont les engagements du vendeur d'origine, pas ceux d'Hamza |
+| **Saisonnier** | Le mot **Noël** et toute référence saisonnière (fêtes, cadeau de Noël, Black Friday…) sont retirés |
 | Le reste | Cadrage, composition, fond, forme et couleurs du produit, lumière : strictement identiques |
 
 ## Arrondi des poids convertis — OBLIGATOIRE

@@ -48,35 +48,34 @@ GROUP_ACTOR = "memo23~facebook-public-group-posts-scraper"
 # Formules reellement utilisees par les agents/vendeurs qui destockent du FBA EU.
 QUERIES = [
     # Anglais / UK (le plus gros marche)
-    "UK FBA clearance units take all",
-    "UK FBA stock clearance pcs",
-    "Amazon FBA removal stock UK units",
-    "FBA liquidation UK units available",
-    "UK FBA overstock take all",
-    "Amazon UK FBA clearance DM",
+    "UK FBA stock units take all",
+    "Amazon FBA UK stock units available DM",
+    "Amazon FBA removal order stock UK units",
+    "UK FBA overstock units per unit price",
+    "Amazon UK FBA aged inventory units take all",
+    "FBA seller clearing stock UK ASIN units",
     # Allemagne
-    "Germany FBA clearance units",
-    "DE FBA stock clearance Amazon",
+    "Germany FBA clearance units take all",
+    "DE FBA stock Amazon units available",
     "Amazon FBA Lagerbestand Abverkauf Stueck",
-    "FBA Restposten Amazon Deutschland",
+    "FBA Restposten Amazon Deutschland Stueck",
     # France
-    "stock FBA Amazon a liquider",
-    "destockage stock Amazon FBA France",
-    "liquidation stock FBA unites",
+    "stock FBA Amazon a liquider unites",
+    "destockage stock Amazon FBA France unites",
     # Italie / Espagne
     "stock FBA Amazon liquidazione pezzi",
     "liquidacion stock FBA Amazon unidades",
     # Generique Europe
-    "EU FBA clearance stock units",
-    "Europe FBA stock clearance take all",
-    "Amazon FBA aged inventory clearance Europe",
+    "EU FBA stock units take all ASIN",
+    "Pan EU FBA stock units available",
+    "Europe FBA warehouse stock units ASIN",
 ]
 
 # ---------------------------------------------------------------------------
 # Signaux de filtrage
 # ---------------------------------------------------------------------------
 
-# Marches / entrepots europeens.
+# Marches cibles : Europe + Canada.
 EU_TERMS = [
     "uk fba", "fba uk", "united kingdom", "england", "britain",
     "de fba", "fba de", "germany", "german", "deutschland", "allemagne",
@@ -86,20 +85,26 @@ EU_TERMS = [
     "pl fba", "poland", "polska", "netherlands", "nederland", "belgium",
     "sweden", "czech", "europe", "european", "eu fba", "fba eu", "pan-eu", "pan eu",
     "amazon.co.uk", "amazon.de", "amazon.fr", "amazon.it", "amazon.es", "amazon.nl", "amazon.pl",
+    # Canada : marche accepte egalement.
+    "canada fba", "fba canada", "canada", "canadian", "amazon.ca",
 ]
 
-# Marches hors-Europe -> a ecarter.
+# Marches hors cible (Europe + Canada) -> a ecarter.
 NON_EU_TERMS = [
-    "canada fba", "fba canada", "amazon.ca", "usa fba", "us fba", "fba usa",
+    "usa fba", "us fba", "fba usa",
     "amazon.com fba", "fob midwest", "texas", "florida", "california",
     "amazon.co.jp", "japan fba", "australia fba", "amazon.com.au", "india",
 ]
 
-# Revendeurs de palettes de retours : bruit, ce n'est pas du stock vendeur FBA.
-PALLET_NOISE = [
-    "pallet", "palette", "truckload", "wagon load", "bin store", "mystery box",
-    "customer returns", "return pallets", "unclaimed", "shelf pull", "job lot",
-    "car boot", "liquidation pallets", "grade 2",
+# Revendeurs de palettes / lots de retours : ce n'est PAS du stock vendeur FBA.
+# Tout post qui contient un de ces termes est rejete d'office (exclusion dure).
+PALLET_BLOCK = [
+    "pallet", "pallets", "palette", "palettes", "palet", "pallet mixte", "palette mixte",
+    "mixed pallet", "truckload", "truck load", "wagon load", "full load", "container load",
+    "bin store", "mystery box", "mystery boxes", "boite mystere",
+    "customer return", "customer returns", "return pallet", "returns pallet",
+    "unclaimed", "shelf pull", "shelf pulls", "job lot", "job lots", "car boot",
+    "grade 2", "grade b", "lost post", "lost mail", "liquidation pallet",
 ]
 
 # Signaux "vrai agent / vendeur qui sort son stock".
@@ -109,6 +114,17 @@ SELLER_SIGNALS = [
     "aged inventory", "long term storage", "storage fee", "clearance",
     "destockage", "liquidation", "abverkauf", "restposten",
 ]
+
+# Societes de debarras / enlevement de dechets : homonymie sur "clearance" en UK.
+WASTE_BLOCK = [
+    "house clearance", "waste clearance", "garden clearance", "garage clearance",
+    "flat clearance", "property clearance", "office clearance", "probate clearance",
+    "rubbish", "waste carrier", "waste removal", "skip hire", "landfill",
+    "debarras", "encombrants", "entrupelung",
+]
+
+# Le post doit parler d'Amazon/FBA : sinon c'est du wholesale generique.
+AMAZON_TERMS = ["fba", "amazon", "asin", "fnsku", "seller central"]
 
 # Quantite exacte annoncee : "470 units", "1,200 pcs", "678 pieces", "500 Stueck".
 QTY_RE = re.compile(
@@ -199,7 +215,17 @@ def analyse(post: dict) -> Lead | None:
 
     eu_hits = _found(lc, EU_TERMS)
     non_eu_hits = _found(lc, NON_EU_TERMS)
-    pallet_hits = _found(lc, PALLET_NOISE)
+    # Exclusion dure : palettes, lots de retours, truckloads. Aucun score ne rattrape.
+    if _found(lc, PALLET_BLOCK):
+        return None
+
+    # Exclusion dure : societes de debarras (faux amis de "clearance").
+    if _found(lc, WASTE_BLOCK):
+        return None
+
+    # Hors sujet si le post ne mentionne ni Amazon ni FBA.
+    if not _found(lc, AMAZON_TERMS):
+        return None
     seller_hits = _found(lc, SELLER_SIGNALS)
     qty_hits = [f"{m.group(1)} {m.group(2)}" for m in QTY_RE.finditer(text)]
 
@@ -211,7 +237,7 @@ def analyse(post: dict) -> Lead | None:
         reasons.append("quantite exacte annoncee")
     if eu_hits:
         score += 3
-        reasons.append("marche EU: " + ", ".join(sorted(set(eu_hits))[:3]))
+        reasons.append("marche cible: " + ", ".join(sorted(set(eu_hits))[:3]))
     if EU_PRICE_RE.search(text):
         score += 1
         reasons.append("prix en GBP/EUR")
@@ -225,15 +251,13 @@ def analyse(post: dict) -> Lead | None:
         score += 1
         reasons.append("photo produit")
 
-    # Penalites : palettes de retours et marches hors Europe.
-    if pallet_hits and not qty_hits:
-        score -= 3
-        reasons.append("revendeur de palettes (pas du stock vendeur)")
+    # Penalite : marche hors cible.
     if non_eu_hits and not eu_hits:
         score -= 4
-        reasons.append("hors Europe: " + ", ".join(sorted(set(non_eu_hits))[:2]))
+        reasons.append("hors marche cible: " + ", ".join(sorted(set(non_eu_hits))[:2]))
 
-    if score <= 0:
+    # Sans quantite exacte annoncee, ce n'est pas l'offre recherchee.
+    if not qty_hits or score <= 0:
         return None
 
     attachments = post.get("attachments") or []

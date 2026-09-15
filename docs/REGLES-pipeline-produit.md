@@ -46,10 +46,30 @@ supprimer l'ancienne, au cas où l'import d'images échoue.
 |---|---|
 | Traduction | Tout texte anglais → français, même police, taille, couleur, position |
 | Unités | LBS → kg, inch → cm, valeur recalculée (1 lb = 0,4536 kg / 1 in = 2,54 cm) |
+| **Arrondi des poids** | Un poids converti en kg est **toujours arrondi au multiple de 10 le plus proche**. 199 kg → **200 kg**. 111,8 kg → **110 kg**. 264 lb = 119,75 kg → **120 kg**. Jamais de décimale sur un poids. |
 | Marques | Jamais traduites ni déformées, reproduites à l'identique |
 | Orthographe | Chaque caractère vérifié. « kg » et « cm » exactement |
 | Rien à corriger | Si ni texte anglais, ni unité impériale, ni mannequin à changer → **on ne touche pas à l'image**, on garde l'originale (0 crédit) |
 | Le reste | Cadrage, composition, fond, forme et couleurs du produit, lumière : strictement identiques |
+
+## Arrondi des poids convertis — OBLIGATOIRE
+
+Tout poids converti de LBS vers kg est **arrondi au multiple de 10 le plus
+proche**, sans décimale. Règle posée par Hamza le 15/09/2026 : un chiffre rond
+est plus lisible et plus crédible sur une fiche produit qu'une conversion
+mécanique à la virgule.
+
+| Valeur convertie | À écrire |
+|---|---|
+| 199 kg | **200 kg** |
+| 111,8 kg | **110 kg** |
+| 119,75 kg (264 lb) | **120 kg** |
+| 99,8 kg (220 lb) | **100 kg** |
+| 45,4 kg (100 lb) | **50 kg** |
+
+S'applique partout : images modifiées, titre, description, features, FAQ.
+Les dimensions en cm gardent leur valeur exacte — la règle ne concerne que
+les poids.
 
 ## Règle du mannequin femme — OBLIGATOIRE
 

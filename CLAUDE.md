@@ -2,7 +2,7 @@
 
 Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **DZD**.
 
-## Les 5 règles dures
+## Les 6 règles dures
 
 1. **Ne lancer AUCUNE action sans l'annoncer et obtenir la validation d'Hamza.**
    Vaut pour tout ce qui **dépense** (Magnific, Apify), **écrit** (GitHub,
@@ -27,6 +27,11 @@ Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **D
 
 5. **Français par défaut** pour tout contenu produit, créa et traduction.
    Ne pas redemander. Autre langue seulement si demandée.
+
+6. **Tout poids converti de LBS en kg est arrondi au multiple de 10 le plus
+   proche**, sans décimale. 199 kg → **200 kg**. 111,8 kg → **110 kg**.
+   S'applique aux images, au titre, à la description, aux features et à la FAQ.
+   Les dimensions en cm gardent leur valeur exacte.
 
 ## Avant d'agir, lire
 

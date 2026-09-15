@@ -2,7 +2,7 @@
 
 Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **DZD**.
 
-## Les 11 règles dures
+## Les 12 règles dures
 
 1. **Ne lancer AUCUNE action sans l'annoncer et obtenir la validation d'Hamza.**
    Vaut pour tout ce qui **dépense** (Magnific, Apify), **écrit** (GitHub,
@@ -64,9 +64,32 @@ Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **D
     jusqu'à la source. Les specs (dimensions, poids, vitesses) restent
     exactes — on réécrit la forme, jamais les chiffres.
 
-11. **Un emoji au début de chaque grand titre** (`<h3>`) de la description.
-    Un seul emoji, en rapport avec le sujet du paragraphe, suivi d'une espace.
-    Pas d'emoji dans le titre du produit, ni dans les features, ni dans la FAQ.
+11. **Un emoji au début de chaque grand titre** de la description.
+    Un seul emoji, en rapport avec le sujet, suivi d'une espace.
+    Pas d'emoji dans le titre du produit.
+
+12. **Titre produit : court et clair.** Marque + type de produit + un seul
+    argument clé, rien de plus. Viser **50 à 70 caractères**, jamais plus.
+    Ne pas empiler les specs : elles vont dans la description.
+    - ✅ `Tapis de marche pliable Lysole 12 km/h`
+    - ✅ `Appareil abdominaux GoDyna pliable`
+    - ❌ `Appareil abdominaux GoDyna pliable & réglable inclinaison et hauteur
+      & roulettes silencieuses`
+    - ❌ `Montre connectée GedFong NOIR Double bracelet, écran 1,43", appels
+      WhatsApp, moniteur SpO2/sommeil, étanche IP67, plus de 107 modes...`
+
+## Format de la fiche produit
+
+Repris du format d'Hamza (fiches SPERAX / Kiddoza), corrigé de ses défauts :
+
+- **Titre** : court et clair (règle 12)
+- **SKU** : lisible en clair, pas un code — `abdo godyna rose`
+- **Description** : **HTML brut, jamais échappé** (une balise encodée
+  s'affiche en texte sur la fiche). Structure = liste à puces `<ul><li>`, où
+  chaque puce est `emoji 【Titre】 description réécrite`
+- **features / testimonials / faq** : **laissés vides** — Hamza ne les utilise
+  pas, tout passe par la description
+- **`notice_text`** : toujours vide
 
 ## Avant d'agir, lire
 

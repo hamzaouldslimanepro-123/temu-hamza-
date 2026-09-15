@@ -9,6 +9,9 @@ Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **D
    LightFunnels, Drive) ou **part vers l'extérieur**. Règle posée après
    2 600 crédits perdus en générations non validées. Annoncer le coût estimé
    (`simulate_cost`, gratuit) avant, pas après.
+   **Exception : l'import produit en mode « input / output »** (voir plus bas).
+   Ses réponses au bloc de questions valent accord pour tout le pipeline — on
+   enchaîne sans redemander, et on ne montre rien en cours de route.
 
 2. **Ne jamais inventer un chiffre ou un contenu client.** Prix, prix barré,
    remise, avis, témoignage, note, spec, norme, certification : si ça ne vient
@@ -33,20 +36,31 @@ Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **D
 - **`docs/REGLES-lightfunnels-meta.md`** — ce que le MCP LightFunnels permet
   et ne permet pas, contraintes LFSolid, mapping du formulaire COD, Meta Ads.
 
-## Pipeline import produit — ne sauter aucune étape
+## Pipeline import produit — mode « input / output »
 
-1. Scraper (Apify `junglee/Amazon-crawler`, ~0,006 $)
-2. Importer les images dans Magnific (`creations_upload_image`, gratuit)
-3. **Montrer les originales à Hamza et lui faire choisir** celles à traiter —
-   avant toute dépense
-4. **Poser la question mannequin**
-5. Modifier les images validées (`images_generate`, `gpt-2`, **1k / low = 30 crédits**)
-6. Relecture par Hamza, image par image, texte compris
-7. Traduire le contenu en français
-8. Créer le produit sur LightFunnels **avec les images retravaillées**, au prix
-   donné par Hamza
+Hamza donne un lien, répond à **un seul bloc de questions**, et reçoit le lien
+du produit LightFunnels. **Rien ne lui est montré entre les deux** : ni les
+images scrapées, ni les images modifiées. Ne pas lui demander de choisir des
+images, ne pas lui demander de les relire.
 
-Ne jamais créer le produit avec les images brutes.
+1. Scraper (Apify `junglee/Amazon-crawler`, ~0,006 $). Si `preview_product`
+   renvoie « Product not found », c'est souvent une fiche en rupture — passer
+   directement par Apify.
+2. **Poser le bloc de questions, une seule fois** : la question mannequin
+   **et** le prix de vente (plus le prix barré seulement s'il en veut un).
+   Rien d'autre.
+3. Importer les images dans Magnific (`creations_upload_image`, gratuit)
+4. Modifier **toutes** les images (`images_generate`, `gpt-2`,
+   **1k / low = 30 crédits**), un prompt conditionnel par image : le modèle lit
+   l'image lui-même et ne corrige que ce qui doit l'être.
+5. Traduire titre, description, features et FAQ en français
+6. Créer le produit sur LightFunnels **avec les URLs des images modifiées**
+   (les liens signés `pikaso.cdnpk.net` sont joignables par leur serveur)
+7. Rendre le lien du produit, le récapitulatif et le coût. Rien d'autre.
+
+Ne jamais créer le produit avec les images brutes. `update_product` ne gère pas
+les images : pour les changer, recréer la fiche — et créer la nouvelle **avant**
+de supprimer l'ancienne.
 
 ## Créas publicitaires Meta — format validé
 

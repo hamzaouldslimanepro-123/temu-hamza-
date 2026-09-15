@@ -4,21 +4,41 @@
 > génération d'image. Chaque règle ici a été payée en crédits Magnific : les
 > respecter évite de refaire des générations à 650 crédits l'unité.
 
-## Le pipeline
+## Le pipeline — mode « input / output »
+
+> Flux validé avec Hamza le 15/09/2026. Il donne un lien, répond à un seul
+> bloc de questions, et reçoit le lien du produit LightFunnels. **Rien ne lui
+> est montré entre les deux** : ni les images scrapées, ni les images
+> modifiées. Ne pas lui demander de choisir des images. Ne pas lui demander de
+> relire les images. Ne rien afficher qu'il n'a pas demandé.
 
 1. **Scraping** — Apify, acteur `junglee/Amazon-crawler`, avec l'URL produit
-   (ou juste l'ASIN). Coût ~0,006 $. Récupérer le champ `highResolutionImages`
-   (galerie principale en 1500px) et `title`.
-2. **Import Magnific** — `creations_upload_image` avec l'URL publique Amazon.
+   (ou juste l'ASIN). Coût ~0,006 $. Récupérer `highResolutionImages`
+   (galerie principale en 1500px), `title`, `features`, `attributes`.
+   LightFunnels `preview_product` échoue sur une fiche en rupture de stock
+   (« Product not found ») — passer directement par Apify dans ce cas.
+2. **Le bloc de questions — une seule fois, avant d'agir.** Poser ensemble :
+   - la **question mannequin** (voir plus bas), obligatoire à chaque produit
+   - le **prix de vente**, et le prix barré **seulement s'il en veut un**
+   Ne jamais deviner ni déduire un prix. Ne pas poser d'autre question.
+3. **Import Magnific** — `creations_upload_image` avec l'URL publique Amazon.
    Magnific va chercher l'image lui-même, côté serveur. Gratuit.
-3. **Validation** — afficher les originales à Hamza (`creations_show`) et lui
-   faire choisir les images à traiter, **avant** de dépenser quoi que ce soit.
-4. **Modification** — `images_generate`, modèle `gpt-2`, l'image d'origine en
-   référence. **Réglage par défaut : 1k / qualité low = 30 crédits**
-   (choix d'Hamza du 15/09/2026, remplace le 1k/moyenne précédent —
-   suffisant pour une landing page où les visuels s'affichent rarement
-   au-delà de 800px).
-5. **Relecture** — Hamza valide image par image, texte compris.
+4. **Modification de TOUTES les images** — `images_generate`, modèle `gpt-2`,
+   l'image d'origine en référence, **1k / qualité low = 30 crédits**.
+   Un seul prompt conditionnel par image : le modèle lit l'image lui-même et
+   ne corrige que ce qui doit l'être (Claude ne voit pas les images, il ne peut
+   donc pas trier en amont — d'où le traitement systématique des 7 ou 8).
+5. **Traduction** du titre, de la description, des features et de la FAQ en
+   français, à partir des données scrapées.
+6. **Création du produit** sur LightFunnels avec les **URLs des images
+   modifiées** (les liens signés `pikaso.cdnpk.net` sont bien joignables par
+   le serveur LightFunnels — vérifié le 15/09/2026).
+7. **Sortie** : le lien du produit, le récapitulatif, le coût en crédits.
+   Rien d'autre.
+
+`update_product` **ne gère pas les images** : pour changer les visuels d'un
+produit existant, il faut le recréer. Créer la nouvelle fiche **avant** de
+supprimer l'ancienne, au cas où l'import d'images échoue.
 
 ## Règles de modification
 
@@ -33,7 +53,8 @@
 
 ## Règle du mannequin femme — OBLIGATOIRE
 
-**À chaque nouveau produit, demander à Hamza avant toute génération.**
+**À chaque nouveau produit, demander à Hamza avant toute génération**, dans
+le bloc de questions de l'étape 2, en même temps que le prix.
 Jamais de report automatique de la décision d'un produit précédent.
 
 Les trois options, dans cet ordre :

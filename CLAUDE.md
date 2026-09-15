@@ -2,7 +2,7 @@
 
 Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **DZD**.
 
-## Les 9 règles dures
+## Les 11 règles dures
 
 1. **Ne lancer AUCUNE action sans l'annoncer et obtenir la validation d'Hamza.**
    Vaut pour tout ce qui **dépense** (Magnific, Apify), **écrit** (GitHub,
@@ -52,6 +52,18 @@ Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **D
    Vaut pour la description, le titre, les features et la FAQ. Ces éléments
    viennent du vendeur d'origine et n'engagent pas Hamza — on ne les reprend
    jamais.
+
+10. **La description est RÉÉCRITE, jamais traduite mot à mot.** La copie
+    marketplace est écrite pour le référencement Amazon : phrases à rallonge,
+    mots-clés empilés, répétitions. On en extrait les faits, puis on écrit un
+    texte neuf : phrases courtes, un bénéfice par paragraphe, un ton direct qui
+    parle au client. Aucune phrase ne doit pouvoir être retracée telle quelle
+    jusqu'à la source. Les specs (dimensions, poids, vitesses) restent
+    exactes — on réécrit la forme, jamais les chiffres.
+
+11. **Un emoji au début de chaque grand titre** (`<h3>`) de la description.
+    Un seul emoji, en rapport avec le sujet du paragraphe, suivi d'une espace.
+    Pas d'emoji dans le titre du produit, ni dans les features, ni dans la FAQ.
 
 ## Avant d'agir, lire
 

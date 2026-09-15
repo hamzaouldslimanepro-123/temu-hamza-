@@ -54,6 +54,8 @@ supprimer l'ancienne, au cas où l'import d'images échoue.
 | **Avis clients** | **Jamais.** `reviews` et `testimonials` restent vides. Ne pas les scraper, ne pas les importer, ne pas en parler dans le compte rendu |
 | **Garantie / SAV** | **Retirés systématiquement** de la description, du titre, des features et de la FAQ : garantie X ans, satisfait ou remboursé, retour gratuit, SAV, service client, assistance après-vente. Ce sont les engagements du vendeur d'origine, pas ceux d'Hamza |
 | **Saisonnier** | Le mot **Noël** et toute référence saisonnière (fêtes, cadeau de Noël, Black Friday…) sont retirés |
+| **Description réécrite** | **Jamais de traduction mot à mot.** On extrait les faits de la copie Amazon, puis on écrit un texte neuf : phrases courtes, un bénéfice par paragraphe, ton direct. Aucune phrase retraçable jusqu'à la source. Les chiffres et specs restent exacts |
+| **Emoji de titre** | **Un emoji au début de chaque grand titre `<h3>`** de la description, en rapport avec le paragraphe, suivi d'une espace. Pas d'emoji dans le titre produit, les features ou la FAQ |
 | Le reste | Cadrage, composition, fond, forme et couleurs du produit, lumière : strictement identiques |
 
 ## Arrondi des poids convertis — OBLIGATOIRE

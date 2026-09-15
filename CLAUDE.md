@@ -29,7 +29,7 @@ Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **D
 
 - **`docs/REGLES-pipeline-produit.md`** — pipeline images Amazon → Magnific,
   règles de traduction et de conversion d'unités, règle du mannequin,
-  grille de coût `gpt-2` (réglage retenu : **1k / moyenne = 100 crédits**).
+  grille de coût `gpt-2` (réglage retenu : **1k / low = 30 crédits**).
 - **`docs/REGLES-lightfunnels-meta.md`** — ce que le MCP LightFunnels permet
   et ne permet pas, contraintes LFSolid, mapping du formulaire COD, Meta Ads.
 
@@ -40,7 +40,7 @@ Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **D
 3. **Montrer les originales à Hamza et lui faire choisir** celles à traiter —
    avant toute dépense
 4. **Poser la question mannequin**
-5. Modifier les images validées (`images_generate`, `gpt-2`, 1k/moyenne)
+5. Modifier les images validées (`images_generate`, `gpt-2`, **1k / low = 30 crédits**)
 6. Relecture par Hamza, image par image, texte compris
 7. Traduire le contenu en français
 8. Créer le produit sur LightFunnels **avec les images retravaillées**, au prix

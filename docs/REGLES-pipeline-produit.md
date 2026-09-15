@@ -14,9 +14,10 @@
 3. **Validation** — afficher les originales à Hamza (`creations_show`) et lui
    faire choisir les images à traiter, **avant** de dépenser quoi que ce soit.
 4. **Modification** — `images_generate`, modèle `gpt-2`, l'image d'origine en
-   référence. **Réglage par défaut : 1k / qualité moyenne = 100 crédits**
-   (choix d'Hamza, suffisant pour une landing page où les visuels
-   s'affichent rarement au-delà de 800px).
+   référence. **Réglage par défaut : 1k / qualité low = 30 crédits**
+   (choix d'Hamza du 15/09/2026, remplace le 1k/moyenne précédent —
+   suffisant pour une landing page où les visuels s'affichent rarement
+   au-delà de 800px).
 5. **Relecture** — Hamza valide image par image, texte compris.
 
 ## Règles de modification
@@ -84,8 +85,8 @@ quel que soit leur sexe.
 | 2k | haute | 650 |
 | 1k | haute | 325 |
 | 2k | moyenne | 200 |
-| **1k** | **moyenne** | **100 ← réglage retenu** |
-| 1k | basse | 30 |
+| 1k | moyenne | 100 |
+| **1k** | **low** | **30 ← réglage retenu** |
 
 C'est la **qualité** qui pilote le coût, pas la résolution : 2k/moyenne (200)
 revient moins cher que 1k/haute (325).
@@ -93,6 +94,6 @@ revient moins cher que 1k/haute (325).
 **Attention** : la qualité pilote aussi la finesse du rendu du texte, et le
 texte est notre point critique (traductions, conversions d'unités). Une
 coquille a déjà été observée en qualité haute (« BG » au lieu de « kg »).
-En qualité moyenne, relire le texte avec d'autant plus d'attention. Si les
-coquilles se multiplient, repasser en qualité haute uniquement sur les
-images chargées en texte.
+En qualité low, relire le texte avec d'autant plus d'attention. Si les
+coquilles se multiplient, repasser en qualité moyenne — puis haute —
+uniquement sur les images chargées en texte.

@@ -54,3 +54,66 @@ Le `manifest.json` est toujours écrit, même sans `--download` : il liste le
 nom du produit et toutes les URLs d'images trouvées, utile si le
 téléchargement direct est bloqué par ton réseau (dans ce cas, télécharge les
 URLs manuellement ou depuis un autre réseau).
+
+---
+
+## fba_hunter.py — sourcing de stock Amazon FBA en Europe
+
+Trouve sur Facebook les vendeurs et agents qui destockent leur stock Amazon FBA
+europeen (UK, DE, FR, IT, ES, NL, PL). Cible les posts du type :
+
+> *UK FBA Clearance – ANC Headphones – **470 units** – £4.20/unit – take all*
+
+c'est-a-dire photo produit + **quantite exacte disponible** + entrepot FBA europeen.
+
+### Installation
+
+Aucune dependance externe (stdlib uniquement). Il faut un token Apify :
+
+```bash
+export APIFY_TOKEN=apify_api_xxxxx
+```
+
+### Utilisation
+
+```bash
+python fba_hunter.py                                  # les 18 requetes par defaut
+python fba_hunter.py --min-score 6                    # seulement les meilleurs leads
+python fba_hunter.py --groups-file fba_groups.example.txt   # + scrape de groupes precis
+python fba_hunter.py --queries-file mes_requetes.txt  # tes propres mots-cles
+```
+
+Sorties : `fba_leads.csv` (import CRM / Google Sheets) et `fba_leads.md`
+(lecture rapide, trie par score).
+
+### Comment le tri fonctionne
+
+Le bruit dominant sur Facebook, ce sont les revendeurs de **palettes de retours**
+(US surtout) : ce n'est pas du stock vendeur FBA. Le score separe les deux :
+
+| Signal | Points |
+|---|---|
+| Quantite exacte annoncee (`470 units`, `1 200 unites`, `500 Stück`) | +3 |
+| Marche europeen (`UK FBA`, `amazon.de`, `Pan-EU`, …) | +3 |
+| ASIN / lien listing Amazon fourni | +2 |
+| Vocabulaire vendeur (`take all`, `per unit`, `removal order`, `destockage`) | +2 |
+| Prix en GBP/EUR | +1 |
+| Photo produit jointe | +1 |
+| Palette / retours clients / mystery box sans quantite | −3 |
+| Marche hors Europe (Canada, USA, Japon…) | −4 |
+
+Seuil par defaut : score ≥ 4.
+
+### Ce que sort chaque lead
+
+Quantites, marche, prix unitaire, ASIN, auteur + URL de profil, URL du post,
+images, et les contacts directs extraits du texte (WhatsApp, Telegram, email,
+telephone) — c'est la colonne qui sert a elargir ton carnet d'agents.
+
+### Notes
+
+- Le tier Apify gratuit limite fortement le nombre de runs (rate limit au bout
+  de quelques appels). Pour balayer les 18 requetes d'un coup, il faut un plan payant.
+- Seuls des posts **publics** sont recuperes ; pas de login ni de cookies.
+- Croise toujours un lead avant d'envoyer de l'argent : anciennete du profil,
+  photos reelles (pas des visuels de stock), et demande le rapport d'inventaire FBA.

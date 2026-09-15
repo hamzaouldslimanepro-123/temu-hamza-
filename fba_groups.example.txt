@@ -1,0 +1,7 @@
+# Groupes Facebook a scraper avec --groups-file
+# Une URL par ligne. Les 2 premiers sont des groupes reperes lors du run reel :
+# on y a trouve des posts exactement au bon format (photo + quantite exacte + prix/unite).
+https://www.facebook.com/groups/1324701291850019
+https://www.facebook.com/groups/459343076810228
+# Ajoute ici les groupes que tes agents actuels frequentent, par ex. :
+# https://www.facebook.com/groups/<id-groupe-fba-liquidation-uk>

@@ -19,7 +19,10 @@ Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **D
 
 3. **Question mannequin obligatoire à CHAQUE nouveau produit**, avant toute
    génération. Jamais de report de la décision d'un produit précédent.
-   Détail des 3 options : `docs/REGLES-pipeline-produit.md`.
+   Quatre options : **A** homme · **B** femme en tenue couvrante · **C** tel
+   quel · **D** **avatar humain** (silhouette humanoïde bleue translucide et
+   lumineuse, sans visage ni genre — pour les images trop dénudées à simplement
+   rhabiller). Détail : `docs/REGLES-pipeline-produit.md`.
 
 4. **Prix produit uniquement par défaut.** Pas de `compare_at_price`, et
    **`notice_text` (Special offer) reste TOUJOURS vide**, sur tous les produits.

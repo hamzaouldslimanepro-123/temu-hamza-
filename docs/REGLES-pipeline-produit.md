@@ -83,11 +83,12 @@ les poids.
 le bloc de questions de l'étape 2, en même temps que le prix.
 Jamais de report automatique de la décision d'un produit précédent.
 
-Les trois options, dans cet ordre :
+Les quatre options, dans cet ordre :
 
 1. **Remplacer par un homme**
 2. **Garder la femme mais tenue plus couvrante** (manches longues, pantalon ample)
 3. **Garder tel quel** — traduction du texte uniquement
+4. **Transformer en avatar humain** — ni homme ni femme, juste la forme humaine
 
 Si l'option 1 est choisie :
 
@@ -100,6 +101,28 @@ Si l'option 1 est choisie :
 
 **Exception absolue : les bébés et les enfants ne sont jamais modifiés**,
 quel que soit leur sexe.
+
+### Option 4 — l'avatar humain
+
+À utiliser quand la personne est trop dénudée pour être simplement rhabillée :
+demi-corps en sous-vêtements, gros plan sur une zone du corps, avant/après
+silhouette. Plutôt que d'habiller ou de changer le sexe, on remplace la
+personne par une **silhouette humanoïde neutre**.
+
+Le style, tel que validé par Hamza (référence : la landing page YAMO) :
+
+> Silhouette humaine en 3D, **translucide et lumineuse, bleu électrique**,
+> parcourue de **points de lumière** répartis sur tout le corps. Surface lisse
+> et uniforme, **sans visage, sans cheveux, sans vêtement**, aucun marqueur de
+> genre — ni poitrine, ni hanches marquées, ni pilosité. Effet hologramme
+> anatomique sur fond réel.
+
+Contraintes identiques aux autres options :
+
+- La silhouette garde **exactement** la pose, la position, l'échelle et le
+  cadrage de la personne remplacée
+- Le produit, le décor, la lumière et le texte restent inchangés
+- **Bébés et enfants ne sont jamais transformés**, avatar compris
 
 ## Contraintes techniques connues
 

@@ -4,16 +4,21 @@ Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **D
 
 ## Le pipeline « Testing Amazon »
 
-Nom donné par Hamza le 16/09/2026. Il couvre tout le trajet d'un produit,
-d'un lien Amazon jusqu'aux créatives prêtes à lancer :
+Nom donné par Hamza le 16/09/2026. **Le pipeline commence au scraping et
+s'arrête aux créatives prêtes à lancer.** Un lien Amazon en entrée, une fiche
+LightFunnels et ses créatives en sortie.
 
 | Partie | Objet | Règles |
 |---|---|---|
-| **1** | Import produit — scrape, images modifiées, fiche LightFunnels | `docs/REGLES-pipeline-produit.md` |
+| **1** | Import produit — scrape Apify, images modifiées, fiche LightFunnels | `docs/REGLES-pipeline-produit.md` |
 | **2** | Créatives Facebook Ads — types 1 et 2, 10 par ad set | `docs/REGLES-creatives-meta.md` |
+| **3** | Campagnes Meta Ads — **en cours de définition** | `docs/REGLES-ads-meta.md` |
 
 Quand Hamza dit « on lance le testing Amazon » ou donne simplement un lien
-Amazon, c'est de ce pipeline qu'il parle.
+Amazon, c'est de ce pipeline qu'il parle : scraping → créatives.
+
+La **partie 3 (ads)** est un prolongement, pas une étape automatique du
+testing : elle ne se lance jamais sans demande explicite.
 
 ## Les 12 règles dures
 

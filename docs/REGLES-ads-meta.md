@@ -252,8 +252,13 @@ Décidée par Hamza le 16/09/2026. **Une campagne, deux ad sets, 20 ads.**
 | Niveau | Contenu |
 |---|---|
 | Campagne | Objectif Conversions / Achat site web. **Le budget est au niveau de la campagne** |
-| Ad set 1 | Les **10 créatives de type 1** (fond travaillé, colonne d'icônes) |
-| Ad set 2 | Les **10 créatives de type 2** (bandeau jaune, fond blanc) |
+| Ad set 1 | **1 ad au format flexible**, contenant les **10 créatives de type 1** |
+| Ad set 2 | **1 ad au format flexible**, contenant les **10 créatives de type 2** |
+
+**Format d'annonce : flexible.** Une seule ad par ad set, avec ses 10 visuels
+dedans — pas 10 ads séparées. Meta fait tourner les visuels à l'intérieur de
+l'ad. C'est la seule automatisation Meta qu'on garde activée ; toutes les
+autres (Advantage+ créative, audience, placements, catalogue) restent coupées.
 
 **Budget : au niveau de la campagne (CBO).** Meta répartit librement entre les
 deux ad sets — c'est voulu, ça laisse l'algorithme arbitrer entre les deux
@@ -270,12 +275,37 @@ DESTOCKAGE ! [NOM DU PRODUIT] venu d'europe
 
 [les détails les plus importants du produit]
 
-Livraison disponible sur [N] wilayas
+Livraison disponible sur 69 wilayas
 ```
 
 Les « détails les plus importants » suivent la même règle que les créatives :
 **des options factuelles, pas des promesses.** Pour le vélo : 16 niveaux de
 résistance, charge 150 kg, écran LCD, pliable.
+
+### Les liens de l'annonce
+
+**Le lien du funnel LightFunnels sert aux deux champs :**
+
+| Champ | Valeur |
+|---|---|
+| URL du site web (lien d'achat) | le lien du funnel |
+| **Lien d'affichage** | le même lien du funnel |
+
+C'est Hamza qui fournit ce lien — voir le point d'arrêt ci-dessous.
+
+### ⛔ POINT D'ARRÊT du pipeline — le funnel
+
+Décidé le 16/09/2026. Le pipeline Testing Amazon **s'arrête juste après la
+création du produit sur LightFunnels** et attend.
+
+1. Parties 1 et 2 : scrape → images modifiées → fiche produit → créatives
+2. **ARRÊT.** Hamza crée le funnel lui-même et donne son lien
+3. Partie 3 : la campagne se construit avec ce lien
+
+Le MCP LightFunnels ne peut de toute façon pas rattacher un produit à un funnel
+existant, ni cloner un funnel (voir `REGLES-lightfunnels-meta.md`) : le funnel
+est donc forcément fait à la main. Ne jamais lancer la partie 3 sans ce lien, et
+ne jamais inventer d'URL de funnel.
 
 ### Titres — les 3, toujours les mêmes
 
@@ -294,18 +324,12 @@ le produit.
 - Convention de nommage des campagnes, ad sets et ads
 - La **description** de l'annonce (le champ sous le titre)
 - Règles de coupure : seuils, délais, métrique de décision
-- **Le nombre de wilayas livrées** — voir l'alerte ci-dessous
 
-## ⚠️ À vérifier — le nombre de wilayas
+## Le nombre de wilayas — tranché
 
-Hamza a dicté « livraison disponible sur **69 wilayas** ». Or l'Algérie compte
-**58 wilayas** depuis le découpage de 2019 (48 auparavant). Il n'existe pas de
-69ᵉ wilaya.
-
-Écrire un nombre supérieur au nombre réel est une affirmation fausse et
-vérifiable sur une annonce. **Demander confirmation avant le premier lancement**
-et utiliser le chiffre réel de couverture : 58 si tout le pays est livré, ou le
-nombre exact de wilayas desservies par son transporteur.
+**« Livraison disponible sur 69 wilayas »**, confirmé par Hamza le 16/09/2026
+après que le point lui ait été signalé (l'Algérie en compte 58 depuis 2019).
+C'est sa décision, elle est actée : écrire 69. Ne pas rouvrir le sujet.
 
 ## Rappel de la règle 1
 

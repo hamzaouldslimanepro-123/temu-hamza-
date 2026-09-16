@@ -43,11 +43,17 @@ On pioche dans la réserve de pixels jamais déclenchés d'Hamza, ou il en crée
 et donne son ID. Ne jamais inventer un `pixel_id`.
 
 **Structure** : une campagne, **budget au niveau campagne (CBO)**, deux ad
-sets — les 10 créatives de type 1 sur l'ad set 1, les 10 de type 2 sur l'ad
-set 2. Pas de budget par ad set.
+sets. Dans chaque ad set, **une seule ad au format flexible** contenant ses 10
+créatives — type 1 sur l'ad set 1, type 2 sur l'ad set 2. Pas de budget par ad
+set, pas d'ads séparées.
+
+**⛔ Point d'arrêt** : le pipeline s'arrête après la création du produit sur
+LightFunnels. Hamza crée le funnel et donne son lien. Ce lien va dans l'URL du
+site web **et** dans le lien d'affichage. Ne jamais inventer d'URL de funnel,
+ne jamais lancer la partie 3 sans ce lien.
 
 **Texte de l'annonce** : `DESTOCKAGE ! [produit] venu d'europe` → les détails
-factuels les plus importants → `Livraison disponible sur [N] wilayas`.
+factuels les plus importants → `Livraison disponible sur 69 wilayas`.
 **Les 3 titres sont fixes** : `Venu d'europe !` · `DESTOCKAGE 100% ORIGINAL !` ·
 `100% ORIGINAL`.
 

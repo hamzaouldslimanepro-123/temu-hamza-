@@ -137,6 +137,8 @@ Détail complet : `docs/REGLES-creatives-meta.md`. L'essentiel :
   **petit drapeau allemand en haut à gauche** — jamais par un prix, jamais par
   un texte d'origine.
 - **`-30%` et `DÉSTOCKAGE` sont sur TOUTES les créatives**, sans exception.
+  `DÉSTOCKAGE` n'est pas un badge séparé : c'est le **premier mot du titre** —
+  `DÉSTOCKAGE VÉLO D'APPARTEMENT PLIABLE`.
 - **Type 1 « sans angle »** : une image propre à fort CTR. Drapeau, titre,
   badge -30%, colonne d'icônes avec les options chiffrées, produit en grand,
   bandeau bas.

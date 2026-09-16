@@ -56,7 +56,9 @@ Détail des questions, jamais supposées ni reportées d'un produit précédent 
    cette image par sa vidéo. **Le lui rappeler à chaque fois** : si l'image
    reste, le test vidéo ne veut rien dire.
 
-Le reste est fixe : objectif **Conversions / Achat sur site web uniquement**,
+Le reste est fixe : **« Obtenir des conversions de toutes les audiences »** sur
+chaque ad set (`marketing_goal: NONE`, jamais `NEW_CUSTOMER_ACQUISITION`),
+objectif **Conversions / Achat sur site web uniquement**,
 pixel choisi par produit, ciblage **Algérie**, placements **manuels Facebook +
 Instagram seulement** (Audience Network, Messenger et Threads décochés), et on
 **refuse toujours** la proposition Meta de dépenser 5 % du budget pour tester

@@ -195,6 +195,23 @@ du compte publicitaire :
 
 Ne jamais décider seul, ne jamais reporter la réponse d'un produit précédent.
 
+### Objectif d'acquisition — toutes les audiences
+
+Règle d'Hamza du 16/09/2026 : **toujours « Obtenir des conversions de toutes
+les audiences »**, jamais « uniquement de nouveaux clients ».
+
+Côté API, c'est le champ `marketing_goal` de l'ad set :
+
+| Option dans le Gestionnaire | `marketing_goal` |
+|---|---|
+| **Obtenir des conversions de toutes les audiences** | **`NONE`** ← toujours celui-ci |
+| Obtenir des conversions de nouveaux clients uniquement | `NEW_CUSTOMER_ACQUISITION` |
+
+À poser explicitement sur **chaque ad set**, sans attendre la valeur par
+défaut. Ne pas toucher à `existing_customer_budget_percentage`, qui est le
+réglage de répartition du budget entre nouveaux et anciens clients et n'a de
+sens qu'en acquisition de nouveaux clients.
+
 ### Catalogue produit et automatismes — tout désactivé
 
 Hamza le 16/09/2026 : **on désactive toutes les options de catalogue produit**

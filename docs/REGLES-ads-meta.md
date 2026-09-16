@@ -343,6 +343,36 @@ Le prix est déjà connu — Hamza le donne dans le bloc de questions initial.
 Donc le budget se déduit, il ne se demande pas. L'annoncer quand même dans le
 récapitulatif avant création.
 
+### La page — toujours Bootikti
+
+Règle d'Hamza du 16/09/2026 : **pour le pipeline Déstockage / Testing Amazon,
+on utilise TOUJOURS la page Bootikti**, sur n'importe quel compte publicitaire.
+Ne pas demander, ne pas proposer d'alternative.
+
+En pratique : lister les pages du compte (`ads_get_ad_account_pages`) et prendre
+celle dont le nom contient « Bootikti ». Sur le compte 18, c'est
+`Bootikti Eurodestock Officiel` (`125148780567460`).
+
+Si aucune page Bootikti n'existe sur le compte choisi, le signaler à Hamza
+plutôt que de prendre une autre page.
+
+### Format des ads — 10 ads séparées
+
+Le **format flexible n'est pas accessible par l'API** : il repose sur le champ
+`asset_feed_spec` du creative, que le MCP Meta n'expose pas. Ni
+`ads_create_creative` ni `ads_create_ad` ne permettent d'empiler plusieurs
+visuels dans une ad unique. Le flag `is_dynamic_creative` existe bien sur l'ad
+set, mais sans moyen d'y rattacher les 10 visuels il ne sert à rien.
+
+**Décision d'Hamza du 16/09/2026 : 10 ads séparées par ad set.** Meta répartit
+les impressions entre elles et concentre le budget sur la gagnante — le même
+arbitrage qu'une ad flexible aurait fait en interne. La différence est
+cosmétique : 10 lignes dans le Gestionnaire au lieu d'une.
+
+**Les 3 titres se répartissent sur les 10 ads** (une ad image simple n'en porte
+qu'un) : 4 ads avec `Venu d'europe !`, 3 avec `DESTOCKAGE 100% ORIGINAL !`,
+3 avec `100% ORIGINAL`.
+
 ### Nommage — décidé par Hamza le 16/09/2026
 
 | Niveau | Nom |

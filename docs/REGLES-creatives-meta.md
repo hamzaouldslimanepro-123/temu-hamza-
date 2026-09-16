@@ -87,7 +87,7 @@ P1 Pro, chaise Future Warrior). Beaucoup plus dépouillée que le type 1.
 
 | Zone | Contenu |
 |---|---|
-| **Bandeau haut** | Bande **jaune** pleine largeur, **texte noir** en capitales condensées grasses : `DESTOCKAGE` + nom du produit. Variante vue : bandeau noir à texte jaune |
+| **Bandeau haut** | Bande **jaune** pleine largeur, **texte noir** en capitales condensées grasses : `DESTOCKAGE` + nom du produit + **`VENU D'EUROPE`**. Variante vue : bandeau noir à texte jaune |
 | **Drapeau allemand** | Haut à gauche, dans la zone blanche, sous le bandeau. Le drapeau seul |
 | **Fond** | **Blanc**, uni, sur toute la zone produit |
 | **Produit** | En grand, détouré proprement, centré |
@@ -100,6 +100,26 @@ P1 Pro, chaise Future Warrior). Beaucoup plus dépouillée que le type 1.
 - Pas de fond dégradé, sombre ou lifestyle → **fond blanc uni**
 - Pas de bandeau bas chargé d'accessoires
 - Le bandeau jaune porte tout le poids visuel
+
+### La mention « VENU D'EUROPE » — type 2 uniquement
+
+**Autorisée et attendue sur le type 2**, décision d'Hamza du 16/09/2026.
+Elle va dans le bandeau haut, à la suite du nom du produit, ou dans un bandeau
+jaune en bas de créative.
+
+Formulations validées :
+
+- `DESTOCKAGE MONTRE VENU D'EUROPE` (bandeau haut)
+- `PRODUIT VENU D'EUROPE` (bandeau bas)
+
+**Cette exception ne vaut QUE pour le type 2.** Sur le type 1, la règle reste
+le drapeau seul, sans aucun texte de provenance.
+
+La mention est exacte : la marchandise d'Hamza part effectivement d'Europe —
+ses propres fiches LightFunnels portent déjà « Venu d'europe » dans leur titre.
+Elle ne doit **jamais** être étendue à une allégation de fabrication : pas de
+« Made in Germany », pas de « qualité allemande », pas de « fabriqué en
+Europe ». « Venu d'Europe » décrit l'expédition, pas l'origine de fabrication.
 
 ### Éléments optionnels vus sur les références
 

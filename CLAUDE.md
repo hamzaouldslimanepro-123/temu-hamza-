@@ -143,9 +143,13 @@ Détail complet : `docs/REGLES-creatives-meta.md`. L'essentiel :
   badge -30%, colonne d'icônes avec les options chiffrées, produit en grand,
   bandeau bas.
 - **Type 2 « bandeau jaune »** : bande jaune pleine largeur en haut à texte
-  noir (`DESTOCKAGE` + produit), drapeau allemand en haut à gauche, **fond
-  blanc uni**, produit détouré en grand, et **seulement deux ou trois mentions
-  essentielles** — rien d'autre.
+  noir (`DESTOCKAGE` + produit + **`VENU D'EUROPE`**), drapeau allemand en haut
+  à gauche, **fond blanc uni**, produit détouré en grand, et **seulement deux
+  ou trois mentions essentielles** — rien d'autre.
+- **`VENU D'EUROPE` est autorisé sur le type 2 uniquement** (la marchandise
+  part bien d'Europe). Sur le type 1, drapeau seul, aucun texte de provenance.
+  Jamais de « Made in Germany » ni de « qualité allemande » sur aucun type :
+  « venu d'Europe » décrit l'expédition, pas la fabrication.
 - **Ratio : 1:1 carré, 1k** (décision du 16/09/2026, provisoire). Le format
   1080 × 1920 à bandes vides ne s'applique PAS aux types 1 et 2.
 - **Quantité : 10 créatives par ad set**, une fois les types validés.

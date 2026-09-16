@@ -138,6 +138,8 @@ Détail complet : `docs/REGLES-creatives-meta.md`. L'essentiel :
 - **Type 1 « sans angle »** : une image propre à fort CTR. Drapeau, titre,
   badge -30%, colonne d'icônes avec les options chiffrées, produit en grand,
   bandeau bas.
+- **Ratio : 1:1 carré, 1k** (décision du 16/09/2026, provisoire). Le format
+  1080 × 1920 à bandes vides ne s'applique PAS au type 1.
 - **Jamais sur une créative** : prix (même barré), garantie, SAV, promesse ou
   allégation de résultat, texte de provenance, référence saisonnière.
 - **Des options, pas des bénéfices.** « 16 niveaux de résistance », « charge

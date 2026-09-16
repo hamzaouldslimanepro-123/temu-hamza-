@@ -90,15 +90,17 @@ Repris des trois exemples validés :
 
 Français, conformément à la règle 5 de `CLAUDE.md`.
 
-## ⚠️ Points restant à trancher avec Hamza
+## Format
 
-1. **Le ratio.** Les trois exemples sont en **carré 1:1**. Or le format validé
-   la veille pour les créas Meta est **1080 × 1920** avec deux bandes vides et
-   la créa centrale en 4:5. Demander lequel s'applique au type 1 — ou si les
-   deux sont produits.
-2. **Le badge -30%** : confirmer le style pinceau rouge diagonal.
+**Ratio 1:1 (carré)** — décision d'Hamza du 16/09/2026, qualifiée de
+provisoire (« pour l'instant »). Résolution 1k.
 
-Ne pas générer avant d'avoir ces réponses.
+Le format `1080 × 1920` avec deux bandes vides et une créa centrale en 4:5,
+validé la veille, **ne s'applique pas au type 1**. Il reste documenté dans
+`CLAUDE.md` pour les créas qui en auront besoin (Stories / Reels).
+
+**Badge `-30%`** : pinceau / éclaboussure rouge en diagonale, comme sur les
+trois exemples de référence.
 
 ## Rappel de la règle 1
 

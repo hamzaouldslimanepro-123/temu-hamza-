@@ -1,0 +1,64 @@
+{
+  "_lisez_moi": "Config reelle RELIFE Stepper pour scripts/meta_flex_ads.py. Compte et page recuperes via l'API Meta le 16/09/2026. Ids d'ad sets = ceux crees en pause.",
+  "produit": "RELIFE Stepper",
+  "ad_account_id": "act_515719344871670",
+  "_compte": "18 Actif Emerg Renai BM 003 — business Emerg Renai BM — EUR",
+  "page_id": "125148780567460",
+  "_page": "Bootikti Eurodestock Officiel",
+  "instagram_actor_id": null,
+  "funnel_url": "https://www.bootiktipremium.online/PbIgSfN3O",
+  "display_url": "https://www.bootiktipremium.online/PbIgSfN3O",
+  "cta": "SHOP_NOW",
+  "corps": "8900 DA au lieu de 16000 DA\n\nDESTOCKAGE ! Stepper RELIFE venu d'europe\n\nDes produits de qualite premium, selectionnes en Europe.\n\nResistance hydraulique reglable\nEcran LCD : temps, pas, calories\nElastiques de traction inclus\nCompact, se range debout\nSurface antiderapante\n\nLivraison disponible sur 69 wilayas",
+  "_corps_a_relire": "Hamza doit relire ce texte avant le push : les specs viennent de la fiche scrapee, le prix de ses reponses. Les accents sont a remettre si besoin.",
+  "titres": [
+    "Venu d'europe !",
+    "DESTOCKAGE 100% ORIGINAL !",
+    "100% ORIGINAL"
+  ],
+  "ad_sets": {
+    "image 1": {
+      "adset_id": "120252044748850439",
+      "dossier": "type-1"
+    },
+    "image 2": {
+      "adset_id": "120252044749830439",
+      "dossier": "type-2"
+    },
+    "video": {
+      "adset_id": "120252044750330439",
+      "dossier": "video"
+    }
+  },
+  "creatives": {
+    "type-1": [
+      "https://pikaso.cdnpk.net/private/production/5464865747/render.png?token=exp=1789776000~hmac=2df2255a75506d00c9e245b9b11df4ae149baf951c05431d16525b478c4efa7c",
+      "https://pikaso.cdnpk.net/private/production/5464857551/render.png?token=exp=1789776000~hmac=47a698464b94fa956cbcf7818ecfa53380446c2bfaa622deeed8f7efdeb677ab",
+      "https://pikaso.cdnpk.net/private/production/5464855720/render.png?token=exp=1789776000~hmac=42d5cb30a355c9270244605655e3ae37615ef8772c1b3140ec159241cb89a7ba",
+      "https://pikaso.cdnpk.net/private/production/5464856896/render.png?token=exp=1789776000~hmac=eebced3b46fb0ca513e84321f8521ba4a2b21ff7710bc525ee49d602134d30fb",
+      "https://pikaso.cdnpk.net/private/production/5464853922/render.png?token=exp=1789776000~hmac=a6c6ac22f89e010a6ac3ae378d42ec96ca3d95121da09340337be731d3d3f1f6",
+      "https://pikaso.cdnpk.net/private/production/5464854468/render.png?token=exp=1789776000~hmac=d9b6b38453d8def35e190fa83c916d825db141e179e905e2f99bbede7159a0ac",
+      "https://pikaso.cdnpk.net/private/production/5464853076/render.png?token=exp=1789776000~hmac=37242db8293646768aa377a087bf3fbc384c7246a4886cf7e4a2b1ff82ce5d25",
+      "https://pikaso.cdnpk.net/private/production/5464853508/render.png?token=exp=1789776000~hmac=b21c0223dce6623d89844f5be6b4548bc691055049389854bc4101e686ba9ae3",
+      "https://pikaso.cdnpk.net/private/production/5464852151/render.png?token=exp=1789776000~hmac=9f162a6c2a8c9778229c2695d54f3c6728bf6635f940d72f78752bb413d1dfd6",
+      "https://pikaso.cdnpk.net/private/production/5464852341/render.png?token=exp=1789776000~hmac=b2a7f71553442bd7a9a5454757aca835a9a7d5669f206500c420e03ee6b76ef9"
+    ],
+    "type-2": [
+      "https://pikaso.cdnpk.net/private/production/5464882321/render.png?token=exp=1789776000~hmac=41df3a0c030d408919c26782b2c4c0e3040735b079f0bd0ce0c34cd6db63f4b8",
+      "https://pikaso.cdnpk.net/private/production/5464870684/render.png?token=exp=1789776000~hmac=687efa3c33a00519ad695fa2f7cab4503eaeede939b40447ef72bbe0556b475f",
+      "https://pikaso.cdnpk.net/private/production/5464873463/render.png?token=exp=1789776000~hmac=8151dac09498d816f10d8a2b0ff335f3adbbab5a074a638e0d05a6769a3c1b93",
+      "https://pikaso.cdnpk.net/private/production/5464869655/render.png?token=exp=1789776000~hmac=e202005ab3723f8c1cb487fd5b14b14df7d60726d5a034c4468fb52b59440adb",
+      "https://pikaso.cdnpk.net/private/production/5464869517/render.png?token=exp=1789776000~hmac=cbfda001970bc40c194c08d34668154a2234b5f8d69eef4d955ff930d21f15cc",
+      "https://pikaso.cdnpk.net/private/production/5464867738/render.png?token=exp=1789776000~hmac=19fa6cfc7aa8a5479c33d8f93ff7d45a94305ea3576b0e326555c7f0fb803601",
+      "https://pikaso.cdnpk.net/private/production/5464869924/render.png?token=exp=1789776000~hmac=23780baa03845e4e02cf753a6ce9b14704b71ced564fb37da358859376df920d",
+      "https://pikaso.cdnpk.net/private/production/5464868341/render.png?token=exp=1789776000~hmac=770543bc17658851eff501701d1b1077a2556bc1f0e7add01acee42c5b6e10b8",
+      "https://pikaso.cdnpk.net/private/production/5464866743/render.png?token=exp=1789776000~hmac=86c60d671538eb25d2be2f35dfcd7ec4e1e009f879f3f037b1b5a6ce8814e585",
+      "https://pikaso.cdnpk.net/private/production/5464865791/render.png?token=exp=1789776000~hmac=e94094d90d3ccfa44374c303195b1a0905a8ec29ce59ab0c43d9d5b40d50468f"
+    ],
+    "video": [
+      "https://pikaso.cdnpk.net/private/production/5464865747/render.png?token=exp=1789776000~hmac=2df2255a75506d00c9e245b9b11df4ae149baf951c05431d16525b478c4efa7c"
+    ]
+  },
+  "_creatives_note": "10 type 1 + 10 type 2. Le dossier video reprend la 1re creative de type 1 en remplissage : a REMPLACER par la video dans le Gestionnaire. Les tokens des URLs expirent le 2026-09-20 — passe ce delai, Claude les regenere (gratuit).",
+  "_campagne_id": "120252044747300439"
+}

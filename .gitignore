@@ -1,4 +1,3 @@
-scraped_products/
-*.html
-__pycache__/
+creatives/
 *.pyc
+__pycache__/

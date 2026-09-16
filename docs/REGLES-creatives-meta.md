@@ -34,6 +34,7 @@ sur Facebook Ads.**
 | **Drapeau allemand** | Petit, en **haut à gauche**. Le drapeau SEUL. Aucun texte d'origine à côté |
 | **Titre produit** | Gros, gras, lisible en 0,5 s. Marque + type + l'argument principal |
 | **Badge -30%** | **Toujours présent.** Style pinceau / éclaboussure rouge, en diagonale |
+| **Mention DÉSTOCKAGE** | **Toujours présente**, en capitales, près du badge -30%. C'est ce qui justifie la remise sans annoncer de prix |
 | **Colonne d'icônes** | À gauche : icône + intitulé + valeur chiffrée, une ligne par option |
 | **Produit** | En grand, au centre, bien éclairé, fidèle à l'original |
 | **Bandeau bas** | Accessoires fournis, ou 2-3 specs complémentaires avec icônes |

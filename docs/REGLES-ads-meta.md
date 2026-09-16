@@ -369,9 +369,13 @@ les impressions entre elles et concentre le budget sur la gagnante — le même
 arbitrage qu'une ad flexible aurait fait en interne. La différence est
 cosmétique : 10 lignes dans le Gestionnaire au lieu d'une.
 
-**Les 3 titres se répartissent sur les 10 ads** (une ad image simple n'en porte
-qu'un) : 4 ads avec `Venu d'europe !`, 3 avec `DESTOCKAGE 100% ORIGINAL !`,
-3 avec `100% ORIGINAL`.
+**Les 3 titres vont sur CHAQUE image**, pas répartis entre les ads — décision
+d'Hamza du 16/09/2026. C'est exactement ce que le format flexible permet : une
+ad porte plusieurs titres et Meta choisit. Comme Hamza crée les ads à la main
+dans le Gestionnaire, il les met tous les trois sur chaque visuel.
+
+(À l'API, une ad image simple n'accepte qu'un titre — raison de plus pour que
+les ads soient montées dans le Gestionnaire.)
 
 ### Nommage — décidé par Hamza le 16/09/2026
 

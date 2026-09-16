@@ -85,8 +85,8 @@ ne jamais lancer la partie 3 sans ce lien.
 
 **Texte de l'annonce** : `DESTOCKAGE ! [produit] venu d'europe` → les détails
 factuels les plus importants → `Livraison disponible sur 69 wilayas`.
-**Les 3 titres sont fixes** : `Venu d'europe !` · `DESTOCKAGE 100% ORIGINAL !` ·
-`100% ORIGINAL`.
+**Les 3 titres sont fixes et vont sur CHAQUE image**, pas répartis :
+`Venu d'europe !` · `DESTOCKAGE 100% ORIGINAL !` · `100% ORIGINAL`.
 
 **Le prix dans le texte de l'annonce** : parfois oui, parfois non — **c'est la
 question 9 du bloc**, jamais décidée seule. Si oui, le prix se met **tout en

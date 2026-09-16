@@ -275,17 +275,21 @@ Meta refuse de créer une ad sans creative, et un creative exige au moins une
 image ou une vidéo. **Impossible de livrer « une ad flexible avec la créa
 vide ».**
 
-Contournement retenu — **option A** :
+Contournement retenu — **option B**, choisie par Hamza le 16/09/2026 :
 
-1. Créer l'**ad set 3 entièrement configuré**, et le laisser **sans ad**
-2. Livrer à Hamza, prêts à copier : le texte principal, les 3 titres, la
-   description, le lien du funnel (URL du site **et** lien d'affichage)
-3. Hamza crée l'ad flexible avec sa vidéo dans le Gestionnaire
+1. Créer l'**ad set 3** configuré à l'identique des deux autres
+2. Y créer une **ad flexible complète** — texte, 3 titres, description, lien du
+   funnel en URL du site **et** en lien d'affichage
+3. Y mettre **une seule créative de type 1** en remplissage, uniquement pour
+   que Meta accepte l'ad
+4. Hamza remplace ensuite cette image par sa vidéo dans le Gestionnaire
 
-Option B écartée (mais disponible s'il la demande) : créer l'ad flexible avec
-une statique en remplissage, qu'il remplace par la vidéo. Risque : s'il oublie
-de remplacer, une statique tourne dans l'ad set censé tester la vidéo et
-faussse la lecture du test.
+**⚠️ À rappeler à Hamza à chaque livraison d'un ad set 3 :** l'image de
+remplissage doit être remplacée par la vidéo. Si elle reste, une statique
+tourne dans l'ad set censé tester la vidéo et le test ne veut plus rien dire.
+
+Option A, écartée : livrer l'ad set sans ad du tout. Reste disponible s'il
+change d'avis.
 
 **Budget : au niveau de la campagne (CBO).** Meta répartit librement entre les
 deux ad sets — c'est voulu, ça laisse l'algorithme arbitrer entre les deux

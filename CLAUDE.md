@@ -28,8 +28,10 @@ jamais reportées d'un produit précédent :
 2. **L'audience** : broad · hommes · femmes
 3. **Âge minimum 26 ans**, ou pas
 4. **Y a-t-il des vidéos ?** Si oui → un **3ᵉ ad set** configuré à l'identique,
-   laissé **sans ad** (Meta refuse une ad sans asset), avec le texte, les
-   titres et le lien livrés à Hamza pour qu'il y ajoute sa vidéo à la main
+   avec une ad flexible complète (texte, titres, lien) et **une seule créative
+   de type 1 en remplissage** pour que Meta accepte l'ad. Hamza remplace ensuite
+   cette image par sa vidéo. **Le lui rappeler à chaque fois** : si l'image
+   reste, le test vidéo ne veut rien dire.
 
 Le reste est fixe : objectif **Conversions / Achat sur site web uniquement**,
 pixel choisi par produit, ciblage **Algérie**, placements **manuels Facebook +

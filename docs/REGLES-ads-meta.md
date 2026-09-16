@@ -46,11 +46,16 @@ Autres comptes accessibles, hors de cette liste : `ND 01`, `ND 02 UZ`,
 `BM 02 AD 01`, `AD 02`, `AD 03` (BM 02 Service, USD) · `Hamza Hamza`
 (perso, lecture seule).
 
-### Si Hamza choisit un compte en lecture seule (05 ou 08)
+### Les comptes 01, 05 et 08 sont mis de côté
 
-Préparer tout ce qui peut l'être — créatives, textes, ciblage, structure,
-budget — et le lui livrer pour qu'il crée la campagne à la main dans le
-Gestionnaire. Ne pas tenter l'appel MCP : Meta le refuse.
+Hamza a tranché le 16/09/2026 : **on les laisse en dehors du pipeline**, les
+14 comptes pilotables suffisent. Ne pas les reproposer, ne pas relancer le
+sujet du MCP non déployé ni du compte désactivé. Ils restent listés ci-dessus
+pour mémoire seulement.
+
+Si un jour il en choisit un quand même : préparer tout ce qui peut l'être —
+créatives, textes, ciblage, structure, budget — et le lui livrer pour création
+manuelle dans le Gestionnaire. Ne pas tenter l'appel MCP, Meta le refuse.
 
 ## Le portefeuille de travail par défaut — BootiktiPremium
 

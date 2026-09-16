@@ -34,6 +34,14 @@ Instagram seulement** (Audience Network, Messenger et Threads décochés), et on
 **refuse toujours** la proposition Meta de dépenser 5 % du budget pour tester
 d'autres placements.
 
+**Tout le catalogue produit et tous les automatismes Meta sont désactivés** :
+DPA / Advantage+ catalogue, Advantage+ créative, Advantage+ audience,
+Advantage+ placements. La créative part exactement telle qu'on l'a produite.
+
+**Le MCP ne peut PAS créer de pixel** — Gestionnaire d'événements uniquement.
+On pioche dans la réserve de pixels jamais déclenchés d'Hamza, ou il en crée un
+et donne son ID. Ne jamais inventer un `pixel_id`.
+
 ## Les 12 règles dures
 
 1. **Ne lancer AUCUNE action sans l'annoncer et obtenir la validation d'Hamza.**

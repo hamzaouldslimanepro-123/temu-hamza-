@@ -159,6 +159,45 @@ du compte publicitaire :
 
 Ne jamais décider seul, ne jamais reporter la réponse d'un produit précédent.
 
+### Catalogue produit et automatismes — tout désactivé
+
+Hamza le 16/09/2026 : **on désactive toutes les options de catalogue produit**
+et, plus largement, tous les automatismes Meta qui reprennent la main sur la
+créative ou le ciblage.
+
+À décocher / ne pas activer :
+
+- **Catalogue produit** et publicités dynamiques (DPA / Advantage+ catalogue) —
+  on diffuse nos créatives, pas un flux produit
+- **Advantage+ créative** : améliorations automatiques de l'image, recadrages,
+  variantes de texte, musique, filtres
+- **Advantage+ audience** / extension automatique de l'audience
+- **Advantage+ placements** / extension automatique des placements
+- **Budget Advantage campaign** si Hamza demande de l'ABO
+- Toute suggestion d'« opportunité » du Gestionnaire qui modifie créative,
+  ciblage ou placement
+
+La créative part telle qu'on l'a produite. C'est tout l'intérêt du travail de
+la partie 2 : Meta ne doit pas la recadrer ni la réécrire.
+
+### Le pixel — le MCP ne peut PAS en créer
+
+**Limite dure, vérifiée :** aucun outil du MCP Meta ne crée un pixel ou un
+dataset. La création passe uniquement par le **Gestionnaire d'événements** de
+Meta, à la main.
+
+Sur un pixel **existant**, le MCP permet en revanche : créer les règles
+d'événement (Purchase, AddToCart, Lead…), ajouter les extracteurs de paramètres
+(valeur, devise), activer / désactiver, lire la qualité du signal et le volume.
+
+Donc à chaque nouveau produit, deux chemins :
+
+1. **Piocher dans la réserve de pixels jamais déclenchés** d'Hamza
+   (`PETS`, `Hamza 1`, et tout dataset dont `last_fired_time` est vide)
+2. **Hamza en crée un** dans le Gestionnaire d'événements et donne son ID
+
+Ne jamais promettre de créer un pixel, ne jamais inventer un `pixel_id`.
+
 ### Placements — manuels, Facebook et Instagram seulement
 
 **Toujours en placements manuels.** On coche Facebook et Instagram, **on

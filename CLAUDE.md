@@ -2,6 +2,19 @@
 
 Projet e-commerce COD Algérie — Hamza (NAELDEALS). Compte LightFunnels en **DZD**.
 
+## Le pipeline « Testing Amazon »
+
+Nom donné par Hamza le 16/09/2026. Il couvre tout le trajet d'un produit,
+d'un lien Amazon jusqu'aux créatives prêtes à lancer :
+
+| Partie | Objet | Règles |
+|---|---|---|
+| **1** | Import produit — scrape, images modifiées, fiche LightFunnels | `docs/REGLES-pipeline-produit.md` |
+| **2** | Créatives Facebook Ads — types 1 et 2, 10 par ad set | `docs/REGLES-creatives-meta.md` |
+
+Quand Hamza dit « on lance le testing Amazon » ou donne simplement un lien
+Amazon, c'est de ce pipeline qu'il parle.
+
 ## Les 12 règles dures
 
 1. **Ne lancer AUCUNE action sans l'annoncer et obtenir la validation d'Hamza.**
@@ -102,7 +115,7 @@ Repris du format d'Hamza (fiches SPERAX / Kiddoza), corrigé de ses défauts :
   charges des créatives Facebook Ads, type 1 « sans angle », ce qui figure et
   ne figure JAMAIS sur une créative.
 
-## Pipeline import produit — mode « input / output »
+## Testing Amazon, partie 1 — import produit, mode « input / output »
 
 Hamza donne un lien, répond à **un seul bloc de questions**, et reçoit le lien
 du produit LightFunnels. **Rien ne lui est montré entre les deux** : ni les
@@ -128,7 +141,7 @@ Ne jamais créer le produit avec les images brutes. `update_product` ne gère pa
 les images : pour les changer, recréer la fiche — et créer la nouvelle **avant**
 de supprimer l'ancienne.
 
-## Partie 2 du pipeline — créatives Facebook Ads
+## Testing Amazon, partie 2 — créatives Facebook Ads
 
 Détail complet : `docs/REGLES-creatives-meta.md`. L'essentiel :
 

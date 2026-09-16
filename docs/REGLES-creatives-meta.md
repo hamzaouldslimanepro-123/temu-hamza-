@@ -1,12 +1,21 @@
-# Créatives Facebook Ads — partie 2 du pipeline
+# Testing Amazon, partie 2 — créatives Facebook Ads
 
 > Cahier des charges donné par Hamza le 16/09/2026, à partir de trois créatives
 > déjà produites via Magnific / `gpt-2` (aspirateur de toilettage neakasa,
 > moniteur portable DPJJ, tablette AZEYOU F5). À lire **avant** toute
 > génération de créative.
 
-La partie 2 démarre une fois la fiche produit créée sur LightFunnels
-(partie 1 : `REGLES-pipeline-produit.md`).
+Partie 2 du pipeline **« Testing Amazon »**. Elle démarre une fois la fiche
+produit créée sur LightFunnels (partie 1 : `REGLES-pipeline-produit.md`).
+
+## État de validation
+
+- **Type 1** — validé par Hamza le 16/09/2026
+- **Type 2** — gabarit validé, **la variante reste à choisir** (trois produites
+  sur le vélo Dskeuzeew : bandeau jaune simple / double bandeau avec vignettes /
+  bandeau noir à texte jaune)
+- Reste aussi à trancher : type 1 ou type 2 en créative principale, ou les deux
+  en test sur le même ad set
 
 ## L'angle de vente des produits Amazon
 

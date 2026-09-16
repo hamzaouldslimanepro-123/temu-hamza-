@@ -1,4 +1,6 @@
-# Règles du pipeline produit — images Amazon → landing page COD
+# Testing Amazon, partie 1 — import produit
+
+> Partie 1 du pipeline « Testing Amazon ». Images Amazon → fiche LightFunnels.
 
 > Cahier des charges validé avec Hamza (NAELDEALS). À lire **avant** toute
 > génération d'image. Chaque règle ici a été payée en crédits Magnific : les

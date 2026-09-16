@@ -7,6 +7,61 @@ La partie 3 démarre une fois la fiche produit créée (partie 1) et les
 créatives produites (partie 2). Elle **ne fait pas partie du testing
 automatique** : elle ne se lance que sur demande explicite d'Hamza.
 
+## Le compte de travail — BootiktiPremium
+
+Décision d'Hamza du 16/09/2026 : **le pipeline Testing Amazon tourne sur les
+comptes publicitaires du portefeuille business « BootiktiPremium »**
+(`business_id 1749810102230676`). Boutique associée : `bootiktipremium.online`.
+
+### Comptes publicitaires (tous EUR, actifs, MCP ouvert)
+
+| Compte | ad_account_id |
+|---|---|
+| 07 BootiktiPremium 001 | `586926064144750` |
+| 10 BootiktiPremium 003 | `499810739343442` |
+| 16 Actif BootiktiPremium 005 | `9711966435499771` |
+
+Budget quotidien minimum : **0,87 €** par ad set.
+
+### Pages disponibles
+
+| Page | page_id |
+|---|---|
+| معدات رياضية أوروبية أصلية | `1135519649642384` |
+| Chrono destock | `612335108632360` |
+| Top gadgets dz | `583918584812801` |
+| Best Seller dz | `554899241051211` |
+| Authentica dz | `563129580227946` |
+| Original shoes | `1070824092773899` |
+| Wally Algiers | `581279238392104` |
+
+Les deux premières collent particulièrement au pipeline : la page arabe
+(« équipements sportifs européens originaux ») pour le sport, et
+« Chrono destock » pour l'angle déstockage.
+
+### Pixels
+
+**122 datasets** dans ce BM. Hamza en crée un par produit — beaucoup de
+`N Shoes`, plus des pixels produit (`Masseur XXL`, `sperax walk men`,
+`Fauteuil high tickets`, `Meuble 1`, `Tapis 2`, `tesvor 2`…).
+
+Deux pixels **jamais déclenchés**, donc disponibles pour un nouveau produit :
+
+| Pixel | dataset_id |
+|---|---|
+| `PETS` | `1438622408245104` |
+| `Hamza 1` | `858635596684170` |
+
+C'est la réserve d'avance dont parlait `REGLES-lightfunnels-meta.md`. Pour en
+trouver d'autres, filtrer sur `last_fired_time` vide (`1969-12-31`).
+
+### ⛔ Compte à ne pas utiliser via le MCP
+
+`08 Actif Emerg Renai BM 001` (`1117600846770141`) : le compte est ACTIF et
+lisible, mais `is_ads_mcp_enabled: false` — Meta n'a pas encore ouvert l'accès
+programmatique dessus. Vérifié deux fois le 16/09/2026. On peut lire ses
+données, pas y créer de campagne. À la main dans le Gestionnaire, tout marche.
+
 ## Ce qui est déjà connu
 
 Repris de `REGLES-lightfunnels-meta.md`, vérifié en séance le 14/09/2026.

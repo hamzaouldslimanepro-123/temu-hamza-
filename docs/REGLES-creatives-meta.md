@@ -74,6 +74,39 @@ Exemple — vélo d'appartement Dskeuzeew :
 Règle simple : si la mention ne peut pas être vérifiée sur la fiche technique,
 elle ne monte pas sur l'image.
 
+## Quantité
+
+**10 créatives par ad set.** À produire une fois les types validés.
+
+## Créative type 2 — bandeau jaune, fond blanc
+
+Validée par Hamza le 16/09/2026 (références : montre Sport Watch, kit neakasa
+P1 Pro, chaise Future Warrior). Beaucoup plus dépouillée que le type 1.
+
+### Structure
+
+| Zone | Contenu |
+|---|---|
+| **Bandeau haut** | Bande **jaune** pleine largeur, **texte noir** en capitales condensées grasses : `DESTOCKAGE` + nom du produit. Variante vue : bandeau noir à texte jaune |
+| **Drapeau allemand** | Haut à gauche, dans la zone blanche, sous le bandeau. Le drapeau seul |
+| **Fond** | **Blanc**, uni, sur toute la zone produit |
+| **Produit** | En grand, détouré proprement, centré |
+| **Infos** | **Les plus importantes seulement, rien d'autre.** Deux ou trois mentions maximum, en noir |
+| **Badge -30%** | Présent, discret, souvent en bas à droite |
+
+### Ce qui distingue le type 2 du type 1
+
+- Pas de colonne de cinq ou six icônes → deux ou trois mentions seulement
+- Pas de fond dégradé, sombre ou lifestyle → **fond blanc uni**
+- Pas de bandeau bas chargé d'accessoires
+- Le bandeau jaune porte tout le poids visuel
+
+### Éléments optionnels vus sur les références
+
+- Une ou deux **vignettes produit** en encart à droite (détail, mise en situation)
+- Un **pictogramme jaune** thématique (patte d'animal pour l'animalerie)
+- Une mention de modèle en haut à droite (`P1 PRO 5 EN 1`)
+
 ## Style visuel de référence
 
 Repris des trois exemples validés :

@@ -7,11 +7,57 @@ La partie 3 démarre une fois la fiche produit créée (partie 1) et les
 créatives produites (partie 2). Elle **ne fait pas partie du testing
 automatique** : elle ne se lance que sur demande explicite d'Hamza.
 
-## Le compte de travail — BootiktiPremium
+## ⚠️ RÈGLE — toujours demander le compte publicitaire
 
-Décision d'Hamza du 16/09/2026 : **le pipeline Testing Amazon tourne sur les
-comptes publicitaires du portefeuille business « BootiktiPremium »**
+**À chaque fois que le pipeline arrive à l'étape ads, demander à Hamza quel
+compte publicitaire utiliser.** Ne jamais le supposer, ne jamais reporter le
+choix d'un produit précédent. Lui présenter la liste ci-dessous.
+
+Le défaut de travail reste **BootiktiPremium**, mais le choix est le sien à
+chaque produit.
+
+### Les 17 comptes de sa liste de référence
+
+| # | Compte | ad_account_id | Pilotable par MCP |
+|---|---|---|---|
+| 01 | Actif Emerg 001 | `527271895629888` | ⛔ compte DÉSACTIVÉ par Meta |
+| 02 | Actif cp Emerg 001 | `521117530324711` | ✅ |
+| 03 | Actif Emerg 002 | `595599763430641` | ✅ |
+| 04 | Actif Emerg 003 | `456998410798479` | ✅ |
+| 05 | Actif cp Emerg 002 | `586493962787132` | ❌ lecture seule |
+| 06 | Actif cp Emerg 003 | `607657055550723` | ✅ |
+| 07 | BootiktiPremium 001 | `586926064144750` | ✅ |
+| 08 | Actif Emerg Renai BM 001 | `1117600846770141` | ❌ lecture seule |
+| 10 | BootiktiPremium 003 | `499810739343442` | ✅ |
+| 11 | Actif Emerg 004 | `1311333073389358` | ✅ |
+| 12 | Actif Emerg 005 | `1863562074383573` | ✅ |
+| 13 | Actif cp Emerg 004 | `579318491592167` | ✅ |
+| 14 | Actif cp Emerg 005 | `9233178096752029` | ✅ |
+| 16 | Actif BootiktiPremium 005 | `9711966435499771` | ✅ |
+| 17 | Actif Emerg Renai BM 002 | `624955156791078` | ✅ |
+| 18 | Actif Emerg Renai BM 003 | `515719344871670` | ✅ |
+| 20 | Actif Emerg Renai BM 005 | `3889143234688181` | ✅ |
+
+**Les numéros 09, 15 et 19 n'existent pas** — confirmé par Hamza le
+16/09/2026. La numérotation garde simplement des trous.
+
+Autres comptes accessibles, hors de cette liste : `ND 01`, `ND 02 UZ`,
+`NZ 03 UZ` (Naeldeals, USD) · `AD 03`, `AD 04`, `AD 05` (BM 01, USD) ·
+`BM 02 AD 01`, `AD 02`, `AD 03` (BM 02 Service, USD) · `Hamza Hamza`
+(perso, lecture seule).
+
+### Si Hamza choisit un compte en lecture seule (05 ou 08)
+
+Préparer tout ce qui peut l'être — créatives, textes, ciblage, structure,
+budget — et le lui livrer pour qu'il crée la campagne à la main dans le
+Gestionnaire. Ne pas tenter l'appel MCP : Meta le refuse.
+
+## Le portefeuille de travail par défaut — BootiktiPremium
+
+Décision d'Hamza du 16/09/2026 : **le pipeline Testing Amazon tourne par défaut
+sur les comptes du portefeuille « BootiktiPremium »**
 (`business_id 1749810102230676`). Boutique associée : `bootiktipremium.online`.
+Le choix du compte lui est quand même demandé à chaque produit.
 
 ### Comptes publicitaires (tous EUR, actifs, MCP ouvert)
 
@@ -54,13 +100,6 @@ Deux pixels **jamais déclenchés**, donc disponibles pour un nouveau produit :
 
 C'est la réserve d'avance dont parlait `REGLES-lightfunnels-meta.md`. Pour en
 trouver d'autres, filtrer sur `last_fired_time` vide (`1969-12-31`).
-
-### ⛔ Compte à ne pas utiliser via le MCP
-
-`08 Actif Emerg Renai BM 001` (`1117600846770141`) : le compte est ACTIF et
-lisible, mais `is_ads_mcp_enabled: false` — Meta n'a pas encore ouvert l'accès
-programmatique dessus. Vérifié deux fois le 16/09/2026. On peut lire ses
-données, pas y créer de campagne. À la main dans le Gestionnaire, tout marche.
 
 ## Ce qui est déjà connu
 

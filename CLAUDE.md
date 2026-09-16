@@ -20,6 +20,11 @@ Amazon, c'est de ce pipeline qu'il parle : scraping → créatives.
 La **partie 3 (ads)** est un prolongement, pas une étape automatique du
 testing : elle ne se lance jamais sans demande explicite.
 
+**À l'étape ads, TOUJOURS demander à Hamza quel compte publicitaire utiliser**,
+en lui présentant la liste de `docs/REGLES-ads-meta.md`. Jamais de supposition,
+jamais de report du choix d'un produit précédent. Portefeuille par défaut :
+BootiktiPremium.
+
 ## Les 12 règles dures
 
 1. **Ne lancer AUCUNE action sans l'annoncer et obtenir la validation d'Hamza.**

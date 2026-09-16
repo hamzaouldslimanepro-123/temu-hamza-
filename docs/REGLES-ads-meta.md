@@ -543,6 +543,7 @@ Constaté le 16/09/2026, après avoir épuisé toutes les voies :
 | `creations_deliver` (PNG 16 bits) | ❌ renvoie une URL sur le même CDN |
 | Relais par LightFunnels | ⚠️ l'import fonctionne, mais `get_product` **n'expose pas** les URLs `assets.lightfunnels.com` |
 | Téléchargement local puis upload | ❌ le sandbox est bloqué sur `pikaso.cdnpk.net` (403 au CONNECT) |
+| `upload_source: LOCAL_FILE` | ❌ « This client cannot open the file picker needed for local uploads » — pas de sélecteur de fichier dans ce client |
 
 Note : `ads_creative_upload_media` **est déployé** sur les comptes
 BootiktiPremium (testé sur `07`), mais **pas** sur le compte `18`. Le blocage
@@ -559,6 +560,10 @@ Ce qui lui est livré :
 
 Avantage collatéral : en créant les ads lui-même, Hamza retrouve le **format
 flexible** que l'API ne permet pas.
+
+**La seule voie automatique restante** : héberger les créatives sur un domaine
+que Meta accepte de télécharger — par exemple `bootiktipremium.online` — et
+donner les URLs à Claude. Il crée alors les ads de bout en bout.
 
 **Si un jour Meta accepte une URL d'image**, tester d'abord sur un compte
 BootiktiPremium, où l'outil d'upload est déployé.

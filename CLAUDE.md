@@ -20,6 +20,17 @@ Amazon, c'est de ce pipeline qu'il parle : scraping → créatives.
 La **partie 3 (ads)** est un prolongement, pas une étape automatique du
 testing : elle ne se lance jamais sans demande explicite.
 
+**⛔ NE JAMAIS ACTIVER UNE CAMPAGNE.** Tout se crée en PAUSE et y reste.
+« Lancer » veut dire créer, pas activer. L'activation engage du budget réel et
+appartient à Hamza seul, dans le Gestionnaire.
+
+**⛔ Les créatives ne peuvent pas être poussées vers Meta par l'API** : Meta ne
+télécharge pas les URLs Magnific (robots.txt du CDN), les outils d'upload ne
+sont pas déployés partout, et le sandbox ne peut pas rapatrier les images.
+Claude monte donc la campagne et les ad sets ; **Hamza crée les ads à la main**
+avec les créatives et les textes qu'on lui livre. Détail et voies testées :
+`docs/REGLES-ads-meta.md`.
+
 **UN SEUL bloc de questions, juste après le scraping**, parties 1/2/3
 confondues — pour limiter les allers-retours et les crédits. Hamza répond à
 tout d'un coup, puis on enchaîne sans le relancer. Le bloc : mannequin · prix ·

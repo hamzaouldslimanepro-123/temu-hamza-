@@ -495,6 +495,53 @@ le produit.
 après que le point lui ait été signalé (l'Algérie en compte 58 depuis 2019).
 C'est sa décision, elle est actée : écrire 69. Ne pas rouvrir le sujet.
 
+## ⛔ NE JAMAIS ACTIVER UNE CAMPAGNE
+
+Règle absolue posée par Hamza le 16/09/2026 : **toutes les campagnes, ad sets
+et ads se créent en PAUSE et y restent.** Claude ne les active jamais, sous
+aucun prétexte, même si Hamza dit « lance » ou « go » — « lancer » signifie
+créer, pas activer.
+
+L'activation est un geste qui engage du budget réel. Elle appartient à Hamza,
+dans le Gestionnaire, et à lui seul. Ne pas utiliser `ads_activate_entity` ni
+`ads_update_entity` pour passer un statut en ACTIVE sur une entité de ce
+pipeline.
+
+Les résumés interactifs renvoyés par les outils Meta contiennent un bouton
+« Activate Campaign » : ne jamais le présenter comme une étape à faire, et ne
+jamais l'actionner.
+
+## ⛔ Les créatives ne peuvent pas atteindre Meta par l'API
+
+Constaté le 16/09/2026, après avoir épuisé toutes les voies :
+
+| Voie | Résultat |
+|---|---|
+| `ads_creative_upload_media` / `upload_image` depuis une URL Magnific | ❌ « Image Wasn't Downloaded » — Meta ne franchit pas le `robots.txt` du CDN `pikaso.cdnpk.net` |
+| `ads_create_creative` avec `image_url` Magnific | ❌ même erreur |
+| `creations_deliver` (PNG 16 bits) | ❌ renvoie une URL sur le même CDN |
+| Relais par LightFunnels | ⚠️ l'import fonctionne, mais `get_product` **n'expose pas** les URLs `assets.lightfunnels.com` |
+| Téléchargement local puis upload | ❌ le sandbox est bloqué sur `pikaso.cdnpk.net` (403 au CONNECT) |
+
+Note : `ads_creative_upload_media` **est déployé** sur les comptes
+BootiktiPremium (testé sur `07`), mais **pas** sur le compte `18`. Le blocage
+sur les URLs Magnific, lui, est indépendant du compte.
+
+**Conséquence pour le pipeline :** Claude monte la campagne et les ad sets,
+mais **les ads doivent être créées à la main** par Hamza dans le Gestionnaire.
+Ce qui lui est livré :
+
+1. La campagne et les ad sets, configurés et en pause
+2. Les créatives, téléchargeables depuis Magnific ou depuis une fiche relais
+   LightFunnels
+3. Le texte, les 3 titres, la description et le lien, prêts à coller
+
+Avantage collatéral : en créant les ads lui-même, Hamza retrouve le **format
+flexible** que l'API ne permet pas.
+
+**Si un jour Meta accepte une URL d'image**, tester d'abord sur un compte
+BootiktiPremium, où l'outil d'upload est déployé.
+
 ## Rappel de la règle 1
 
 Rien ne se lance sur Meta sans annonce préalable et accord d'Hamza. Les

@@ -1,0 +1,34 @@
+{
+  "_lisez_moi": "Gabarit de campagne pour scripts/meta_flex_ads.py. Les champs À COMPLÉTER ne sont jamais devinés : ils viennent d'Hamza ou du Gestionnaire (règle 2). Les ids d'ad sets ci-dessous sont ceux réellement créés le 16/09/2026, en pause.",
+
+  "produit": "RELIFE Stepper",
+  "ad_account_id": "À COMPLÉTER — l'id du compte 18, forme act_123456789",
+  "page_id": "À COMPLÉTER — id de la page Bootikti",
+  "instagram_actor_id": null,
+
+  "funnel_url": "https://www.bootiktipremium.online/PbIgSfN3O",
+  "display_url": "https://www.bootiktipremium.online/PbIgSfN3O",
+  "cta": "SHOP_NOW",
+
+  "corps": "8900 DA au lieu de 16000 DA\n\nDESTOCKAGE ! Stepper RELIFE venu d'europe\n\nDes produits de qualité premium, sélectionnés en Europe.\n\n✅ Résistance hydraulique réglable\n✅ Écran LCD : temps, pas, calories\n✅ Élastiques de traction inclus\n✅ Compact, se range debout\n✅ Surface antidérapante\n\nLivraison disponible sur 69 wilayas",
+
+  "titres": [
+    "Venu d'europe !",
+    "DESTOCKAGE 100% ORIGINAL !",
+    "100% ORIGINAL"
+  ],
+
+  "ad_sets": {
+    "image 1": { "adset_id": "120252044748850439", "dossier": "type-1" },
+    "image 2": { "adset_id": "120252044749830439", "dossier": "type-2" },
+    "video":   { "adset_id": "120252044750330439", "dossier": "video" }
+  },
+
+  "creatives": {
+    "type-1": [],
+    "type-2": [],
+    "video":  []
+  },
+
+  "_creatives_note": "Claude remplit ces trois listes avec les URLs Magnific des créatives. `fetch` les télécharge dans creatives/relife-stepper/<dossier>/. Si les URLs signées ont expiré, Claude les régénère (gratuit, aucun crédit)."
+}

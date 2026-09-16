@@ -27,9 +27,10 @@ appartient à Hamza seul, dans le Gestionnaire.
 **⛔ Les créatives ne peuvent pas être poussées vers Meta par l'API** : Meta ne
 télécharge pas les URLs Magnific (robots.txt du CDN), les outils d'upload ne
 sont pas déployés partout, et le sandbox ne peut pas rapatrier les images.
-Claude monte donc la campagne et les ad sets ; **Hamza crée les ads à la main**
-avec les créatives et les textes qu'on lui livre. Détail et voies testées :
-`docs/REGLES-ads-meta.md`.
+Claude monte donc la campagne et les ad sets ; **les ads se créent depuis le PC
+d'Hamza** avec `scripts/meta_flex_ads.py` (download Magnific → upload multipart
+→ ad flexible), ou à la main dans le Gestionnaire. Voies testées :
+`docs/REGLES-ads-meta.md` · installation locale : `docs/INSTALL-pc-local.md`.
 
 **UN SEUL bloc de questions, juste après le scraping**, parties 1/2/3
 confondues — pour limiter les allers-retours et les crédits. Hamza répond à
@@ -191,6 +192,8 @@ Repris du format d'Hamza (fiches SPERAX / Kiddoza), corrigé de ses défauts :
   grille de coût `gpt-2` (réglage retenu : **1k / low = 30 crédits**).
 - **`docs/REGLES-lightfunnels-meta.md`** — ce que le MCP LightFunnels permet
   et ne permet pas, contraintes LFSolid, mapping du formulaire COD, Meta Ads.
+- **`docs/INSTALL-pc-local.md`** — installer le pipeline sur le PC d'Hamza,
+  seule voie pour pousser les créatives vers Meta et créer les ads flexibles.
 - **`docs/REGLES-creatives-meta.md`** — **partie 2 du pipeline** : cahier des
   charges des créatives Facebook Ads, type 1 « sans angle », ce qui figure et
   ne figure JAMAIS sur une créative.

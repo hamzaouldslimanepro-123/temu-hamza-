@@ -561,7 +561,16 @@ Ce qui lui est livré :
 Avantage collatéral : en créant les ads lui-même, Hamza retrouve le **format
 flexible** que l'API ne permet pas.
 
-**La seule voie automatique restante** : héberger les créatives sur un domaine
+**Solution retenue le 16/09/2026 : le script local.**
+`scripts/meta_flex_ads.py`, lancé depuis le PC d'Hamza, inverse le sens de
+circulation — `Magnific → PC → Meta`. Meta ne télécharge plus rien, il
+**reçoit** les octets en multipart sur `/act_<id>/adimages`, donc le
+`robots.txt` du CDN ne bloque plus. Le script appelle l'API Graph directement,
+ce qui débloque en prime `asset_feed_spec` : **ad flexible, 10 images, les 3
+titres sur chacune** — ce que le MCP ne sait pas faire. Ads toujours en
+`PAUSED`. Installation : `docs/INSTALL-pc-local.md`.
+
+**Autre voie automatique** : héberger les créatives sur un domaine
 que Meta accepte de télécharger — par exemple `bootiktipremium.online` — et
 donner les URLs à Claude. Il crée alors les ads de bout en bout.
 

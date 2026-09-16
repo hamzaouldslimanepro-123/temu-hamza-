@@ -28,6 +28,7 @@ ADS
 6. Âge minimum 26 ans : oui ou non
 7. Vidéos : oui ou non  → si oui, un 3e ad set
 8. Pixel (liste présentée en même temps)
+9. Afficher le prix dans le TEXTE de l'annonce : oui ou non
 ```
 
 Ce qui **ne se demande pas**, parce que c'est déduit ou fixe :
@@ -386,6 +387,33 @@ DESTOCKAGE ! [NOM DU PRODUIT] venu d'europe
 
 Livraison disponible sur 69 wilayas
 ```
+
+#### Variante avec le prix affiché — à demander
+
+**Question 9 du bloc initial : afficher le prix dans le texte de l'annonce ?**
+À poser à chaque produit, ne jamais décider seul.
+
+Si oui, le prix passe **tout en haut, avant `DESTOCKAGE`** :
+
+```
+12 600 DA
+
+DESTOCKAGE ! [NOM DU PRODUIT] venu d'europe
+
+[les détails les plus importants du produit]
+
+Livraison disponible sur 69 wilayas
+```
+
+**Attention à ne pas confondre les deux supports :**
+
+| | Prix autorisé ? |
+|---|---|
+| **Texte de l'annonce** | ✅ si Hamza répond oui à la question 9 |
+| **Créative (l'image)** | ❌ **jamais**, aucune exception — seul le `-30%` |
+
+Le prix affiché est celui de la fiche LightFunnels, en DZD, jamais le prix
+barré.
 
 Les « détails les plus importants » suivent la même règle que les créatives :
 **des options factuelles, pas des promesses.** Pour le vélo : 16 niveaux de

@@ -24,7 +24,8 @@ testing : elle ne se lance jamais sans demande explicite.
 confondues — pour limiter les allers-retours et les crédits. Hamza répond à
 tout d'un coup, puis on enchaîne sans le relancer. Le bloc : mannequin · prix ·
 prix barré · compte publicitaire · audience · âge 26+ · vidéos · pixel (liste
-présentée en même temps, filtrée sur les pixels jamais déclenchés).
+présentée en même temps, filtrée sur les pixels jamais déclenchés) · **prix
+affiché dans le texte de l'annonce ou non**.
 
 **Le budget ne se demande pas, il se calcule** depuis le prix de vente :
 **≤ 10 000 DZD → 10 €/jour**, **> 10 000 DZD → 20 €/jour**, au niveau campagne.
@@ -75,6 +76,11 @@ ne jamais lancer la partie 3 sans ce lien.
 factuels les plus importants → `Livraison disponible sur 69 wilayas`.
 **Les 3 titres sont fixes** : `Venu d'europe !` · `DESTOCKAGE 100% ORIGINAL !` ·
 `100% ORIGINAL`.
+
+**Le prix dans le texte de l'annonce** : parfois oui, parfois non — **c'est la
+question 9 du bloc**, jamais décidée seule. Si oui, le prix se met **tout en
+haut, avant `DESTOCKAGE`**. Ne pas confondre les supports : le prix est permis
+dans le **texte**, **jamais sur la créative** (l'image ne porte que le `-30%`).
 
 ## Les 12 règles dures
 

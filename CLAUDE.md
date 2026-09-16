@@ -98,6 +98,9 @@ Repris du format d'Hamza (fiches SPERAX / Kiddoza), corrigé de ses défauts :
   grille de coût `gpt-2` (réglage retenu : **1k / low = 30 crédits**).
 - **`docs/REGLES-lightfunnels-meta.md`** — ce que le MCP LightFunnels permet
   et ne permet pas, contraintes LFSolid, mapping du formulaire COD, Meta Ads.
+- **`docs/REGLES-creatives-meta.md`** — **partie 2 du pipeline** : cahier des
+  charges des créatives Facebook Ads, type 1 « sans angle », ce qui figure et
+  ne figure JAMAIS sur une créative.
 
 ## Pipeline import produit — mode « input / output »
 
@@ -124,6 +127,24 @@ images, ne pas lui demander de les relire.
 Ne jamais créer le produit avec les images brutes. `update_product` ne gère pas
 les images : pour les changer, recréer la fiche — et créer la nouvelle **avant**
 de supprimer l'ancienne.
+
+## Partie 2 du pipeline — créatives Facebook Ads
+
+Détail complet : `docs/REGLES-creatives-meta.md`. L'essentiel :
+
+- **Angle des produits Amazon** : le prix et la provenance. Sur l'image ils ne
+  se traduisent QUE par le badge **-30%** et le **petit drapeau allemand en
+  haut à gauche** — jamais par un prix, jamais par un texte d'origine.
+- **Type 1 « sans angle »** : une image propre à fort CTR. Drapeau, titre,
+  badge -30%, colonne d'icônes avec les options chiffrées, produit en grand,
+  bandeau bas.
+- **Jamais sur une créative** : prix (même barré), garantie, SAV, promesse ou
+  allégation de résultat, texte de provenance, référence saisonnière.
+- **Des options, pas des bénéfices.** « 16 niveaux de résistance », « charge
+  150 kg », « écran LCD » — pas « brûlez plus de calories ». Si ce n'est pas
+  vérifiable sur la fiche technique, ça ne monte pas sur l'image.
+- L'exception « input / output » de la partie 1 ne couvre **pas** les
+  créatives : la règle 1 s'applique, on annonce le coût et on attend l'accord.
 
 ## Créas publicitaires Meta — format validé
 

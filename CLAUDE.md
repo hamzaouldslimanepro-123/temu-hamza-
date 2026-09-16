@@ -63,6 +63,9 @@ sets. Dans chaque ad set, **une seule ad au format flexible** contenant ses 10
 créatives — type 1 sur l'ad set 1, type 2 sur l'ad set 2. Pas de budget par ad
 set, pas d'ads séparées.
 
+**Nommage** : campagne = **le nom du produit** · ad sets = `image 1` /
+`image 2` / `video`. Rien d'autre, pas de date ni de code.
+
 **⛔ Point d'arrêt** : le pipeline s'arrête après la création du produit sur
 LightFunnels. Hamza crée le funnel et donne son lien. Ce lien va dans l'URL du
 site web **et** dans le lien d'affichage. Ne jamais inventer d'URL de funnel,

@@ -342,6 +342,29 @@ Le prix est déjà connu — Hamza le donne dans le bloc de questions initial.
 Donc le budget se déduit, il ne se demande pas. L'annoncer quand même dans le
 récapitulatif avant création.
 
+### Nommage — décidé par Hamza le 16/09/2026
+
+| Niveau | Nom |
+|---|---|
+| **Campagne** | **Le nom du produit**, tel quel |
+| **Ad set 1** | `image 1` |
+| **Ad set 2** | `image 2` |
+| **Ad set 3** *(si vidéo)* | `video` |
+
+Rien d'autre : pas de date, pas de code, pas de préfixe. Le nom du produit
+suffit à identifier la campagne, et `image 1` / `image 2` / `video` à identifier
+ce que chaque ad set teste.
+
+Exemple, pour le vélo Dskeuzeew :
+
+```
+Campagne : Vélo d'appartement pliable Dskeuzeew 16 résistances
+  ├── image 1   → 1 ad flexible, 10 créatives type 1
+  ├── image 2   → 1 ad flexible, 10 créatives type 2
+  └── video     → 1 ad flexible, 1 créative type 1 en remplissage
+                  (Hamza remplace par sa vidéo)
+```
+
 ### Description de l'annonce — l'angle qualité
 
 Le champ description parle **toujours de la qualité premium des produits**.
@@ -406,7 +429,6 @@ le produit.
 
 ## Reste à définir avec Hamza
 
-- Convention de nommage des campagnes, ad sets et ads
 - Règles de coupure : seuils, délais, métrique de décision
 
 ## Le nombre de wilayas — tranché

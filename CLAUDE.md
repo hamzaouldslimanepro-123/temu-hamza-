@@ -42,6 +42,15 @@ Advantage+ placements. La créative part exactement telle qu'on l'a produite.
 On pioche dans la réserve de pixels jamais déclenchés d'Hamza, ou il en crée un
 et donne son ID. Ne jamais inventer un `pixel_id`.
 
+**Structure** : une campagne, **budget au niveau campagne (CBO)**, deux ad
+sets — les 10 créatives de type 1 sur l'ad set 1, les 10 de type 2 sur l'ad
+set 2. Pas de budget par ad set.
+
+**Texte de l'annonce** : `DESTOCKAGE ! [produit] venu d'europe` → les détails
+factuels les plus importants → `Livraison disponible sur [N] wilayas`.
+**Les 3 titres sont fixes** : `Venu d'europe !` · `DESTOCKAGE 100% ORIGINAL !` ·
+`100% ORIGINAL`.
+
 ## Les 12 règles dures
 
 1. **Ne lancer AUCUNE action sans l'annoncer et obtenir la validation d'Hamza.**

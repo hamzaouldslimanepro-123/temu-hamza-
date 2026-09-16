@@ -173,7 +173,6 @@ créative ou le ciblage.
   variantes de texte, musique, filtres
 - **Advantage+ audience** / extension automatique de l'audience
 - **Advantage+ placements** / extension automatique des placements
-- **Budget Advantage campaign** si Hamza demande de l'ABO
 - Toute suggestion d'« opportunité » du Gestionnaire qui modifie créative,
   ciblage ou placement
 
@@ -246,13 +245,67 @@ cette proposition (extension automatique des placements, Advantage+
 placements). Si l'API force une valeur par défaut qui l'active, la désactiver
 explicitement.
 
+### Structure de campagne
+
+Décidée par Hamza le 16/09/2026. **Une campagne, deux ad sets, 20 ads.**
+
+| Niveau | Contenu |
+|---|---|
+| Campagne | Objectif Conversions / Achat site web. **Le budget est au niveau de la campagne** |
+| Ad set 1 | Les **10 créatives de type 1** (fond travaillé, colonne d'icônes) |
+| Ad set 2 | Les **10 créatives de type 2** (bandeau jaune, fond blanc) |
+
+**Budget : au niveau de la campagne (CBO).** Meta répartit librement entre les
+deux ad sets — c'est voulu, ça laisse l'algorithme arbitrer entre les deux
+types de créative. Ne pas mettre de budget par ad set.
+
+Le montant du budget reste à donner par Hamza.
+
+### Texte de l'annonce — Testing Amazon
+
+L'angle est **le prix**. Structure imposée du texte principal :
+
+```
+DESTOCKAGE ! [NOM DU PRODUIT] venu d'europe
+
+[les détails les plus importants du produit]
+
+Livraison disponible sur [N] wilayas
+```
+
+Les « détails les plus importants » suivent la même règle que les créatives :
+**des options factuelles, pas des promesses.** Pour le vélo : 16 niveaux de
+résistance, charge 150 kg, écran LCD, pliable.
+
+### Titres — les 3, toujours les mêmes
+
+| # | Titre |
+|---|---|
+| 1 | `Venu d'europe !` |
+| 2 | `DESTOCKAGE 100% ORIGINAL !` |
+| 3 | `100% ORIGINAL` |
+
+Ces trois titres sont fixes pour tout le pipeline Testing Amazon, quel que soit
+le produit.
+
 ## Reste à définir avec Hamza
 
-- Structure : nombre d'ad sets par produit, répartition des 10 créatives
-- Budget par ad set, et CBO ou ABO
+- **Le montant du budget** de campagne
 - Convention de nommage des campagnes, ad sets et ads
-- Texte principal, titre et description de l'annonce
+- La **description** de l'annonce (le champ sous le titre)
 - Règles de coupure : seuils, délais, métrique de décision
+- **Le nombre de wilayas livrées** — voir l'alerte ci-dessous
+
+## ⚠️ À vérifier — le nombre de wilayas
+
+Hamza a dicté « livraison disponible sur **69 wilayas** ». Or l'Algérie compte
+**58 wilayas** depuis le découpage de 2019 (48 auparavant). Il n'existe pas de
+69ᵉ wilaya.
+
+Écrire un nombre supérieur au nombre réel est une affirmation fausse et
+vérifiable sur une annonce. **Demander confirmation avant le premier lancement**
+et utiliser le chiffre réel de couverture : 58 si tout le pays est livré, ou le
+nombre exact de wilayas desservies par son transporteur.
 
 ## Rappel de la règle 1
 

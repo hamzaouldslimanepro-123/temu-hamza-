@@ -190,13 +190,39 @@ Sur un pixel **existant**, le MCP permet en revanche : créer les règles
 d'événement (Purchase, AddToCart, Lead…), ajouter les extracteurs de paramètres
 (valeur, devise), activer / désactiver, lire la qualité du signal et le volume.
 
-Donc à chaque nouveau produit, deux chemins :
-
-1. **Piocher dans la réserve de pixels jamais déclenchés** d'Hamza
-   (`PETS`, `Hamza 1`, et tout dataset dont `last_fired_time` est vide)
-2. **Hamza en crée un** dans le Gestionnaire d'événements et donne son ID
-
 Ne jamais promettre de créer un pixel, ne jamais inventer un `pixel_id`.
+
+#### La réserve de pixels du testing
+
+Hamza crée **une dizaine de pixels d'avance** dans le Gestionnaire
+d'événements, dédiés au pipeline Testing Amazon. À chaque nouveau produit, on
+en consomme un.
+
+Nommage recommandé : séquentiel et dédié — `TA 01` … `TA 10` — pour ne pas les
+confondre avec ses pixels existants (`N Shoes`, pixels produit).
+
+**Tableau de suivi — à tenir à jour à chaque produit :**
+
+| Pixel | dataset_id | Produit affecté | Date |
+|---|---|---|---|
+| *(à remplir quand Hamza les aura créés)* | | | |
+
+Pixels déjà disponibles, jamais déclenchés :
+
+| Pixel | dataset_id |
+|---|---|
+| `PETS` | `1438622408245104` |
+| `Hamza 1` | `858635596684170` |
+
+#### Savoir quel pixel est libre — par ordre de fiabilité
+
+1. **Le tableau de suivi ci-dessus.** Infaillible, ne dépend d'aucune API.
+2. **`last_fired_time` vide** (`1969-12-31`) dans `ads_get_datasets` : le pixel
+   n'a jamais reçu d'événement. Angle mort : un pixel déjà rattaché à une
+   campagne qui n'a pas encore converti apparaît quand même comme libre.
+3. **Lire le pixel déclaré par chaque ad set** via `ads_get_ad_entities` —
+   **à vérifier**, c'était une question ouverte des notes du 14/09. Lecture
+   seule, sans risque, à tester quand l'occasion se présente.
 
 ### Placements — manuels, Facebook et Instagram seulement
 

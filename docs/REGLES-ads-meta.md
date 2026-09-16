@@ -260,6 +260,33 @@ dedans — pas 10 ads séparées. Meta fait tourner les visuels à l'intérieur 
 l'ad. C'est la seule automatisation Meta qu'on garde activée ; toutes les
 autres (Advantage+ créative, audience, placements, catalogue) restent coupées.
 
+### L'ad set 3 — vidéo, sur demande
+
+**Question à poser à Hamza à chaque produit** (avec le compte, l'audience et
+l'âge) : **y a-t-il des vidéos ?**
+
+S'il répond oui, ajouter un **3ᵉ ad set**, configuré exactement comme les deux
+autres : même ciblage, mêmes placements, même pixel, même optimisation. Il
+accueillera une ad flexible avec la ou les vidéos, qu'**Hamza ajoute lui-même**.
+
+#### Contrainte technique — pas d'ad sans asset
+
+Meta refuse de créer une ad sans creative, et un creative exige au moins une
+image ou une vidéo. **Impossible de livrer « une ad flexible avec la créa
+vide ».**
+
+Contournement retenu — **option A** :
+
+1. Créer l'**ad set 3 entièrement configuré**, et le laisser **sans ad**
+2. Livrer à Hamza, prêts à copier : le texte principal, les 3 titres, la
+   description, le lien du funnel (URL du site **et** lien d'affichage)
+3. Hamza crée l'ad flexible avec sa vidéo dans le Gestionnaire
+
+Option B écartée (mais disponible s'il la demande) : créer l'ad flexible avec
+une statique en remplissage, qu'il remplace par la vidéo. Risque : s'il oublie
+de remplacer, une statique tourne dans l'ad set censé tester la vidéo et
+faussse la lecture du test.
+
 **Budget : au niveau de la campagne (CBO).** Meta répartit librement entre les
 deux ad sets — c'est voulu, ça laisse l'algorithme arbitrer entre les deux
 types de créative. Ne pas mettre de budget par ad set.

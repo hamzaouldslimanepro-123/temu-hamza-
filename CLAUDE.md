@@ -27,6 +27,9 @@ jamais reportées d'un produit précédent :
    portefeuille par défaut BootiktiPremium)
 2. **L'audience** : broad · hommes · femmes
 3. **Âge minimum 26 ans**, ou pas
+4. **Y a-t-il des vidéos ?** Si oui → un **3ᵉ ad set** configuré à l'identique,
+   laissé **sans ad** (Meta refuse une ad sans asset), avec le texte, les
+   titres et le lien livrés à Hamza pour qu'il y ajoute sa vidéo à la main
 
 Le reste est fixe : objectif **Conversions / Achat sur site web uniquement**,
 pixel choisi par produit, ciblage **Algérie**, placements **manuels Facebook +

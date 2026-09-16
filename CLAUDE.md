@@ -20,10 +20,19 @@ Amazon, c'est de ce pipeline qu'il parle : scraping → créatives.
 La **partie 3 (ads)** est un prolongement, pas une étape automatique du
 testing : elle ne se lance jamais sans demande explicite.
 
-**À l'étape ads, TOUJOURS demander à Hamza quel compte publicitaire utiliser**,
-en lui présentant la liste de `docs/REGLES-ads-meta.md`. Jamais de supposition,
-jamais de report du choix d'un produit précédent. Portefeuille par défaut :
-BootiktiPremium.
+**À l'étape ads, TOUJOURS demander à Hamza** trois choses, jamais supposées et
+jamais reportées d'un produit précédent :
+
+1. **Quel compte publicitaire** (liste dans `docs/REGLES-ads-meta.md`,
+   portefeuille par défaut BootiktiPremium)
+2. **L'audience** : broad · hommes · femmes
+3. **Âge minimum 26 ans**, ou pas
+
+Le reste est fixe : objectif **Conversions / Achat sur site web uniquement**,
+pixel choisi par produit, ciblage **Algérie**, placements **manuels Facebook +
+Instagram seulement** (Audience Network, Messenger et Threads décochés), et on
+**refuse toujours** la proposition Meta de dépenser 5 % du budget pour tester
+d'autres placements.
 
 ## Les 12 règles dures
 

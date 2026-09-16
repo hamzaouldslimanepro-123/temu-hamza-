@@ -130,14 +130,62 @@ Repris de `REGLES-lightfunnels-meta.md`, vérifié en séance le 14/09/2026.
 
 **10 créatives par ad set** (décision du 16/09/2026).
 
-## À définir avec Hamza
+## Paramètres fixes — décidés par Hamza le 16/09/2026
 
-- Objectif de campagne (Achat / Prospect / Messages)
-- Structure : nombre d'ad sets, répartition des créatives
-- Budget par ad set et stratégie d'enchères
-- Ciblage Algérie : wilayas, âge, sexe, centres d'intérêt ou broad
-- Pixel à utiliser, et événement optimisé
-- Nommage des campagnes, ad sets et ads
+### Objectif — toujours le même
+
+**Conversions, achat sur site web uniquement.**
+
+| Réglage | Valeur |
+|---|---|
+| Objectif de campagne | Ventes / Conversions (`OUTCOME_SALES`) |
+| Lieu de conversion | **Site web uniquement** — jamais l'app, jamais les messages, jamais les appels |
+| Événement optimisé | **Achat** (`PURCHASE`) |
+| Optimisation de l'ad set | `OFFSITE_CONVERSIONS` |
+| `promoted_object` | le `pixel_id` choisi + `custom_event_type: PURCHASE` |
+
+On **choisit le pixel** à chaque produit (Hamza en crée un par produit, voir la
+section pixels).
+
+### Ciblage — Algérie, le reste se demande
+
+Pays : **Algérie**, systématiquement.
+
+**Deux questions à poser à Hamza à chaque produit**, en même temps que le choix
+du compte publicitaire :
+
+1. **Audience** : `broad` · `hommes` · `femmes` ?
+2. **Âge minimum 26 ans**, ou pas ?
+
+Ne jamais décider seul, ne jamais reporter la réponse d'un produit précédent.
+
+### Placements — manuels, Facebook et Instagram seulement
+
+**Toujours en placements manuels.** On coche Facebook et Instagram, **on
+décoche tout le reste** :
+
+| Plateforme | |
+|---|---|
+| Facebook | ✅ |
+| Instagram | ✅ |
+| Audience Network | ❌ décoché |
+| Messenger | ❌ décoché |
+| Threads | ❌ décoché |
+
+En API : `publisher_platforms: ["facebook", "instagram"]`, et ne pas laisser
+`targeting_automation` élargir les placements.
+
+**Meta propose régulièrement de consacrer 5 % du budget à tester d'autres
+placements : on REFUSE, systématiquement.** Même chose pour toute variante de
+cette proposition (extension automatique des placements, Advantage+
+placements). Si l'API force une valeur par défaut qui l'active, la désactiver
+explicitement.
+
+## Reste à définir avec Hamza
+
+- Structure : nombre d'ad sets par produit, répartition des 10 créatives
+- Budget par ad set, et CBO ou ABO
+- Convention de nommage des campagnes, ad sets et ads
 - Texte principal, titre et description de l'annonce
 - Règles de coupure : seuils, délais, métrique de décision
 

@@ -196,8 +196,76 @@ def fetch(cfg: dict) -> None:
                     else:
                         time.sleep(2 ** (tentative + 1))
 
+    ecrire_index(cfg)
     print(f"\n{total} image(s) dans {cfg['_dossier']}")
+    print(f"Index : {cfg['_dossier'] / 'INDEX.md'}")
     print("Vérifie-les à l'œil, puis lance :  push")
+
+
+def ecrire_index(cfg: dict) -> None:
+    """Écrit un INDEX.md et un index.csv récapitulant les créatives du dossier.
+
+    C'est le document de référence du produit : ce qui part dans quel ad set,
+    avec le texte et les titres de l'annonce. Claude Code, lancé en local dans
+    ce dossier, le lit pour savoir quoi pousser.
+    """
+    racine = cfg["_dossier"]
+    racine.mkdir(parents=True, exist_ok=True)
+
+    lignes = [
+        f"# {cfg['produit']} — créatives",
+        "",
+        f"- Compte : `{compte(cfg)}`{'  — ' + cfg['_compte'] if cfg.get('_compte') else ''}",
+        f"- Page : `{cfg['page_id']}`{'  — ' + cfg['_page'] if cfg.get('_page') else ''}",
+        f"- Lien : {cfg['funnel_url']}",
+        f"- Généré le {time.strftime('%d/%m/%Y à %H:%M')}",
+        "",
+        "Les ads sont créées **en pause**. L'activation appartient à Hamza.",
+        "",
+        "## Créatives par ad set",
+        "",
+        "| Ad set | Dossier | Fichier | Ko |",
+        "|---|---|---|---|",
+    ]
+    csv = ["ad_set,dossier,fichier,octets"]
+
+    for nom, bloc in cfg["ad_sets"].items():
+        sous = bloc.get("dossier") or nom
+        dossier = racine / sous
+        fichiers = images_du_dossier(dossier) if dossier.is_dir() else []
+        if not fichiers:
+            lignes.append(f"| {nom} | `{sous}/` | *(vide)* | — |")
+            continue
+        for fichier in fichiers:
+            taille = fichier.stat().st_size
+            lignes.append(f"| {nom} | `{sous}/` | `{fichier.name}` | {taille // 1024} |")
+            csv.append(f"{nom},{sous},{fichier.name},{taille}")
+
+    lignes += [
+        "",
+        "## Texte de l'annonce",
+        "",
+        "```",
+        (cfg.get("corps") or "(vide)"),
+        "```",
+        "",
+        "## Titres — les 3 sur chaque image",
+        "",
+    ]
+    lignes += [f"{i}. {t}" for i, t in enumerate(cfg["titres"], start=1)]
+
+    if "video" in cfg["ad_sets"]:
+        lignes += [
+            "",
+            "## Rappel ad set « video »",
+            "",
+            "L'image du dossier `video/` n'est qu'un **remplissage**, pour que Meta",
+            "accepte l'ad. Elle doit être **remplacée par la vidéo** dans le",
+            "Gestionnaire — sinon le test vidéo ne veut rien dire.",
+        ]
+
+    (racine / "INDEX.md").write_text("\n".join(lignes) + "\n", encoding="utf-8")
+    (racine / "index.csv").write_text("\n".join(csv) + "\n", encoding="utf-8")
 
 
 # --------------------------------------------------------------------------- #
@@ -315,6 +383,14 @@ def push(cfg: dict) -> None:
     for nom, n, _c, ad_id in resultats:
         print(f"{nom:<12} {n:>6}  {ad_id:<22} PAUSED")
 
+    lignes = [f"# {cfg['produit']} — ads créées", "",
+              f"Le {time.strftime('%d/%m/%Y à %H:%M')} · compte `{compte(cfg)}`", "",
+              "| Ad set | Images | Creative | Ad | État |", "|---|---|---|---|---|"]
+    for nom, n, creative_id, ad_id in resultats:
+        lignes.append(f"| {nom} | {n} | `{creative_id}` | `{ad_id}` | PAUSED |")
+    (cfg["_dossier"] / "ADS.md").write_text("\n".join(lignes) + "\n", encoding="utf-8")
+    print(f"\nRécapitulatif écrit dans {cfg['_dossier'] / 'ADS.md'}")
+
     if "video" in cfg["ad_sets"]:
         print(
             "\nRAPPEL ad set « video » : l'image de type 1 n'est qu'un remplissage,\n"
@@ -360,6 +436,9 @@ def check(cfg: dict) -> None:
         print(f"  [{nom}] {r.get('name')} · {r.get('status')} / {r.get('effective_status')}")
 
     print(f"\n{total} image(s) prêtes." if total else "\nAucune image : lance fetch d'abord.")
+    index = cfg["_dossier"] / "INDEX.md"
+    if index.is_file():
+        print(f"Index : {index}")
 
 
 # --------------------------------------------------------------------------- #

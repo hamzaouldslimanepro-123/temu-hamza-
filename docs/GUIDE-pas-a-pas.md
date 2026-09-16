@@ -65,7 +65,17 @@ sont normaux avant l'étape 6. **En cas d'erreur, s'arrêter là** et me la coll
 python scripts\meta_flex_ads.py fetch campagnes\relife-stepper.json
 ```
 
-Résultat dans `creatives\relife-stepper\{type-1,type-2,video}\`.
+Résultat dans `creatives\relife-stepper\{type-1,type-2,video}\`, plus deux
+documents écrits au même endroit :
+
+| Fichier | Contenu |
+|---|---|
+| `INDEX.md` | le récapitulatif lisible : compte, page, lien, quelle image part dans quel ad set, le texte de l'annonce, les 3 titres |
+| `index.csv` | la même liste en tableau, pour Excel |
+
+Après le `push`, un troisième fichier apparaît : **`ADS.md`**, avec les ids des
+creatives et des ads créées et leur état.
+
 Réentrant : une image déjà téléchargée est sautée.
 
 ## 7. Relire — la seule étape humaine

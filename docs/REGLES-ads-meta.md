@@ -7,14 +7,49 @@ La partie 3 démarre une fois la fiche produit créée (partie 1) et les
 créatives produites (partie 2). Elle **ne fait pas partie du testing
 automatique** : elle ne se lance que sur demande explicite d'Hamza.
 
-## ⚠️ RÈGLE — toujours demander le compte publicitaire
+## ⚠️ RÈGLE — UN SEUL bloc de questions, tout au début
 
-**À chaque fois que le pipeline arrive à l'étape ads, demander à Hamza quel
-compte publicitaire utiliser.** Ne jamais le supposer, ne jamais reporter le
-choix d'un produit précédent. Lui présenter la liste ci-dessous.
+Règle d'Hamza du 16/09/2026, pour limiter les allers-retours, les actions et
+les crédits : **toutes les questions du pipeline se posent en une seule fois,
+juste après le scraping.** Parties 1, 2 et 3 confondues. Il répond à tout d'un
+coup, puis on enchaîne sans le relancer.
 
-Le défaut de travail reste **BootiktiPremium**, mais le choix est le sien à
-chaque produit.
+### Le bloc, dans l'ordre
+
+```
+PRODUIT
+1. Mannequin : A homme · B femme couverte · C tel quel · D avatar humain
+2. Prix de vente en DZD
+3. Prix barré : oui (lequel) ou non
+
+ADS
+4. Compte publicitaire (liste des 14)
+5. Audience : broad · hommes · femmes
+6. Âge minimum 26 ans : oui ou non
+7. Vidéos : oui ou non  → si oui, un 3e ad set
+8. Pixel (liste présentée en même temps)
+```
+
+Ce qui **ne se demande pas**, parce que c'est déduit ou fixe :
+
+- **Le budget** — calculé depuis le prix (≤ 10 000 DZD → 10 € · > 10 000 → 20 €)
+- L'objectif, le pays, les placements, les titres, la structure : tous fixes
+- La description : toujours l'angle qualité premium
+
+### Le pixel — dépendance à résoudre dans le même bloc
+
+Les pixels se listent par compte publicitaire, or le compte fait partie des
+questions. Pour ne pas couper le bloc en deux : **lister d'emblée les pixels du
+portefeuille par défaut BootiktiPremium** en même temps que la question du
+compte. Si Hamza choisit un autre compte, récupérer ses pixels à ce
+moment-là — c'est le seul cas qui justifie un second échange.
+
+Filtrer la liste présentée sur les pixels **jamais déclenchés**
+(`last_fired_time` vide) pour qu'elle reste lisible : ce sont les seuls
+candidats pour un nouveau produit.
+
+Le portefeuille par défaut reste **BootiktiPremium**, mais le choix du compte
+est le sien à chaque produit.
 
 ### Les 17 comptes de sa liste de référence
 
@@ -262,8 +297,7 @@ autres (Advantage+ créative, audience, placements, catalogue) restent coupées.
 
 ### L'ad set 3 — vidéo, sur demande
 
-**Question à poser à Hamza à chaque produit** (avec le compte, l'audience et
-l'âge) : **y a-t-il des vidéos ?**
+**Question posée dans le bloc initial** : **y a-t-il des vidéos ?**
 
 S'il répond oui, ajouter un **3ᵉ ad set**, configuré exactement comme les deux
 autres : même ciblage, mêmes placements, même pixel, même optimisation. Il
@@ -292,10 +326,31 @@ Option A, écartée : livrer l'ad set sans ad du tout. Reste disponible s'il
 change d'avis.
 
 **Budget : au niveau de la campagne (CBO).** Meta répartit librement entre les
-deux ad sets — c'est voulu, ça laisse l'algorithme arbitrer entre les deux
-types de créative. Ne pas mettre de budget par ad set.
+ad sets — c'est voulu, ça laisse l'algorithme arbitrer entre les types de
+créative. Ne pas mettre de budget par ad set.
 
-Le montant du budget reste à donner par Hamza.
+### Montant du budget — calculé, pas demandé
+
+Règle d'Hamza du 16/09/2026, dérivée du prix de vente du produit :
+
+| Prix de vente | Budget quotidien de campagne |
+|---|---|
+| **≤ 10 000 DZD** | **10 €** |
+| **> 10 000 DZD** | **20 €** |
+
+Le prix est déjà connu — Hamza le donne dans le bloc de questions initial.
+Donc le budget se déduit, il ne se demande pas. L'annoncer quand même dans le
+récapitulatif avant création.
+
+### Description de l'annonce — l'angle qualité
+
+Le champ description parle **toujours de la qualité premium des produits**.
+C'est le seul endroit du dispositif où on parle qualité plutôt que prix — le
+texte principal et les titres portent déjà le prix et la provenance.
+
+Formulations possibles : « Des produits de qualité premium, sélectionnés en
+Europe. » · « Qualité premium garantie sur toute notre sélection. » — sans
+jamais promettre de garantie commerciale ni de SAV (règle 9).
 
 ### Texte de l'annonce — Testing Amazon
 
@@ -351,9 +406,7 @@ le produit.
 
 ## Reste à définir avec Hamza
 
-- **Le montant du budget** de campagne
 - Convention de nommage des campagnes, ad sets et ads
-- La **description** de l'annonce (le champ sous le titre)
 - Règles de coupure : seuils, délais, métrique de décision
 
 ## Le nombre de wilayas — tranché

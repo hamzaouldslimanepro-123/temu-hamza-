@@ -20,8 +20,19 @@ Amazon, c'est de ce pipeline qu'il parle : scraping → créatives.
 La **partie 3 (ads)** est un prolongement, pas une étape automatique du
 testing : elle ne se lance jamais sans demande explicite.
 
-**À l'étape ads, TOUJOURS demander à Hamza** trois choses, jamais supposées et
-jamais reportées d'un produit précédent :
+**UN SEUL bloc de questions, juste après le scraping**, parties 1/2/3
+confondues — pour limiter les allers-retours et les crédits. Hamza répond à
+tout d'un coup, puis on enchaîne sans le relancer. Le bloc : mannequin · prix ·
+prix barré · compte publicitaire · audience · âge 26+ · vidéos · pixel (liste
+présentée en même temps, filtrée sur les pixels jamais déclenchés).
+
+**Le budget ne se demande pas, il se calcule** depuis le prix de vente :
+**≤ 10 000 DZD → 10 €/jour**, **> 10 000 DZD → 20 €/jour**, au niveau campagne.
+
+**La description de l'annonce parle toujours de la qualité premium** des
+produits — sans jamais promettre de garantie ni de SAV.
+
+Détail des questions, jamais supposées ni reportées d'un produit précédent :
 
 1. **Quel compte publicitaire** (liste dans `docs/REGLES-ads-meta.md`,
    portefeuille par défaut BootiktiPremium)

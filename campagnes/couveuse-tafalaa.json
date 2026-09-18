@@ -1,0 +1,42 @@
+{
+  "_lisez_moi": "Couveuse TAFALAA 12 oeufs — config pour scripts/meta_flex_ads.py. Un seul ad set, creatives type 1 en arabe algerien. Compte, page, pixel et ids verifies via l'API Meta le 18/09/2026.",
+  "produit": "Couveuse TAFALAA 12 oeufs",
+  "ad_account_id": "act_1311333073389358",
+  "_compte": "11 Actif Emerg 004 — business Temp Bm emerg — EUR",
+  "page_id": "125148780567460",
+  "instagram_actor_id": null,
+  "funnel_url": "https://www.bootiktipremium.online/-EiqELhAx",
+  "display_url": "https://www.bootiktipremium.online/-EiqELhAx",
+  "cta": "SHOP_NOW",
+  "corps": "DESTOCKAGE ! آلة تفقيس البيض TAFALAA جاي من أوروبا\n\nمنتجات نوعية premium، مختارين من أوروبا.\n\n12 بيضة مرة وحدة\nتقليب أوتوماتيكي، من 60 حتى 210 دقيقة\nحرارة من 20 حتى 39,5 درجة\nرطوبة من 20 حتى 75%\nشاشة LED: الحرارة، الرطوبة، وعداد الأيام للفقس\nضوء فحص البيض مدمج\nرؤية 360° على الكوفي كامل\nتعمير الماء بلا ما تحل الغطاء\n\nالتوصيل متوفر في 69 ولاية",
+  "titres": [
+    "Venu d'europe !",
+    "DESTOCKAGE 100% ORIGINAL !",
+    "100% ORIGINAL"
+  ],
+  "ad_sets": {
+    "image 1": {
+      "adset_id": "120254276098880745",
+      "dossier": "type-1"
+    }
+  },
+  "creatives": {
+    "type-1": [
+      "https://pikaso.cdnpk.net/private/production/5487654258/render.png?token=exp=1790035200~hmac=a53f72d794a80e1dfa5e7bbf2de7d8388ba557f511c2588b9dfae28773f7e2b0",
+      "https://pikaso.cdnpk.net/private/production/5487654709/render.png?token=exp=1790035200~hmac=619b0294241c2081ef0e4e2c6de737ceb9d1795be63f778b85c2552eb2a0b95c",
+      "https://pikaso.cdnpk.net/private/production/5487661884/render.png?token=exp=1790035200~hmac=c1c2b6827189a9a90fce826a500654f88c993c2781da61e36cd56497de68c4d6",
+      "https://pikaso.cdnpk.net/private/production/5487654752/render.png?token=exp=1790035200~hmac=a3f44deb9a709d78f15c00a3a75c5061f51d5521c697303f8c2c4a638c644346",
+      "https://pikaso.cdnpk.net/private/production/5487657646/render.png?token=exp=1790035200~hmac=fc593af6f65937a79fbb1e66c3be329d0dd11684ecc6092b357a9554507bb023",
+      "https://pikaso.cdnpk.net/private/production/5487657459/render.png?token=exp=1790035200~hmac=e512c3e7b8843bd6e60ec5b3cf46a33076db0d1817c7a1155df2f64aaa85403c",
+      "https://pikaso.cdnpk.net/private/production/5487659911/render.png?token=exp=1790035200~hmac=cdf9751b630d660632d753b4c01f6682dac07f3a551cb12285eccee8227d311f",
+      "https://pikaso.cdnpk.net/private/production/5487660170/render.png?token=exp=1790035200~hmac=3761eff16b59580e154ac35aa6d3c423040e474181390a54e60068c968471537",
+      "https://pikaso.cdnpk.net/private/production/5487663555/render.png?token=exp=1790035200~hmac=fa33ead745cf9657b73a9168db3bc67e9da460a098ad5530e40f7d02e117b2a8",
+      "https://pikaso.cdnpk.net/private/production/5487663821/render.png?token=exp=1790035200~hmac=d77649e3a82ed6185cd2f4576b4a12266bf36176c4e9b6cbe74141dadcfe72af"
+    ]
+  },
+  "_campagne_id": "120254276097190745",
+  "_pixel_id": "27368384502757954",
+  "_pixel_nom": "PIXEL 63 — jamais declenche",
+  "_note_urls": "Tokens valides jusqu'au 21/09/2026. Passe ce delai, Claude les regenere (gratuit).",
+  "_page": "Bootikti Eurodestock Officiel — regle : Destock Amazon = page Bootikti sur tous les comptes"
+}
